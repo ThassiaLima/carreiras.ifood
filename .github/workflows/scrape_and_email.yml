@@ -39,7 +39,19 @@ jobs:
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
       run: |
-        python main.py 
+        python main.py
+        # --- LINHAS DE DEPURACAO TEMPORARIAS ---
+        echo "Conteúdo da pasta de trabalho após o script Python:"
+        ls -la
+        echo "Verificando se previous_bi_jobs.json foi criado:"
+        test -f previous_bi_jobs.json && echo "Arquivo previous_bi_jobs.json existe!" || echo "Arquivo previous_bi_jobs.json NÃO existe!"
+        # ----------------------------------------
+
+    - name: Upload current jobs history
+      uses: actions/upload-artifact@v4
+      with:
+        name: bi-jobs-history
+        path: previous_bi_jobs.json
 
     - name: Upload current jobs history # <--- NOVO PASSO
       uses: actions/upload-artifact@v4
