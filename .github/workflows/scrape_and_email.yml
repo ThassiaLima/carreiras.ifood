@@ -1,0 +1,71 @@
+name: Scrape iFood BI Jobs and Email
+
+on:
+  schedule:
+    - cron: '0 */4 * * *' # Roda a cada 4 horas (0, 4, 8, 12, 16, 20)
+  workflow_dispatch: # Permite acionar manualmente o workflow
+
+jobs:
+  scrape_and_send:
+    runs-on: ubuntu-latest # Usa o sistema operacional Ubuntu mais recente
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4 # Clona o repositório
+
+    - name: Debug - List repository root after checkout
+      run: |
+        echo "Conteúdo da raiz do repositório APÓS checkout:"
+        pwd
+        ls -la
+
+    - name: Download previous jobs history
+      uses: actions/download-artifact@v4
+      with:
+        name: bi-jobs-history
+        path: . # Baixa o artefato para a raiz do repositório
+      continue-on-error: true # Continua mesmo se o artefato não for encontrado (na primeira execução)
+
+    - name: Debug - List repository root after download
+      run: |
+        echo "Conteúdo da raiz do repositório APÓS download de artefato:"
+        pwd
+        ls -la
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9' # Define a versão do Python
+
+    - name: Install dependencies
+      run: |
+        echo "Caminho atual para pip install:"
+        pwd
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt # Instala as dependências do requirements.txt
+        
+        # Instala dependências do Chrome para Selenium
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable fonts-liberation libnspr4 libnss3 lsb-release wget gnupg
+
+    - name: Run scraper and send email
+      env:
+        SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+        SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+        RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+      run: |
+        echo "Caminho atual para python main.py:"
+        pwd
+        python main.py # Executa o script Python principal
+        
+        echo "Verificando se previous_bi_jobs.json foi criado na pasta atual:"
+        ls -la previous_bi_jobs.json || echo "previous_bi_jobs.json NÃO ENCONTRADO NA PASTA ATUAL!"
+        echo "Conteúdo da pasta atual APÓS a execução do script Python:"
+        ls -la .
+
+    - name: Upload current jobs history
+      uses: actions/upload-artifact@v4
+      with:
+        name: bi-jobs-history
+        path: previous_bi_jobs.json # Sobe o arquivo previous_bi_jobs.json como um artefato
+        if-no-files-found: warn # Avisa se o arquivo não for encontrado, mas não falha o workflow
