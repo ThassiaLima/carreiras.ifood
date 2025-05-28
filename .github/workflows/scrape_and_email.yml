@@ -13,12 +13,24 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Download previous jobs history # <--- NOVO PASSO
+    - name: Debug - List repository root after checkout # <--- NOVO PASSO DE DEPURACAO
+      run: |
+        echo "Conteúdo da raiz do repositório APÓS checkout:"
+        pwd
+        ls -la
+
+    - name: Download previous jobs history
       uses: actions/download-artifact@v4
       with:
         name: bi-jobs-history
-        path: . # Baixa o arquivo para a raiz do repositório
-      continue-on-error: true # Permite que o workflow continue mesmo se o artefato não for encontrado (primeira execução)
+        path: . 
+      continue-on-error: true
+
+    - name: Debug - List repository root after download # <--- NOVO PASSO DE DEPURACAO
+      run: |
+        echo "Conteúdo da raiz do repositório APÓS download de artefato:"
+        pwd
+        ls -la
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -27,8 +39,10 @@ jobs:
 
     - name: Install dependencies
       run: |
+        echo "Caminho atual para pip install:"
+        pwd
         python -m pip install --upgrade pip
-        pip install -r requirements.txt 
+        pip install -r requirements.txt # <--- Continua aqui. Se main.py e requirements.txt estiverem na raiz, isso funcionará.
         
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable fonts-liberation libnspr4 libnss3 lsb-release wget gnupg
@@ -39,22 +53,19 @@ jobs:
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
       run: |
+        echo "Caminho atual para python main.py:"
+        pwd
         python main.py
-        # --- LINHAS DE DEPURACAO TEMPORARIAS ---
-        echo "Conteúdo da pasta de trabalho após o script Python:"
-        ls -la
-        echo "Verificando se previous_bi_jobs.json foi criado:"
-        test -f previous_bi_jobs.json && echo "Arquivo previous_bi_jobs.json existe!" || echo "Arquivo previous_bi_jobs.json NÃO existe!"
-        # ----------------------------------------
+        
+        echo "Verificando se previous_bi_jobs.json foi criado na pasta atual:"
+        ls -la previous_bi_jobs.json || echo "previous_bi_jobs.json NÃO ENCONTRADO NA PASTA ATUAL!"
+        echo "Conteúdo da pasta atual APÓS a execução do script Python:"
+        ls -la .
 
     - name: Upload current jobs history
       uses: actions/upload-artifact@v4
       with:
         name: bi-jobs-history
-        path: previous_bi_jobs.json
-
-    - name: Upload current jobs history # <--- NOVO PASSO
-      uses: actions/upload-artifact@v4
-      with:
-        name: bi-jobs-history
-        path: previous_bi_jobs.json
+        path: previous_bi_jobs.json # <--- AQUI DEVE ENCONTRAR O ARQUIVO
+        # Adicione o if-no-files-found para depuração
+        if-no-files-found: warn # Não falha, mas avisa se o arquivo não for encontrado
