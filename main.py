@@ -21,7 +21,7 @@ EMAIL_SUBJECT = "Novas Vagas de Analista de BI no iFood!"
 
 # --- CONFIGURAÇÕES DE RASPAGEM ---
 URL = "https://carreiras.ifood.com.br/"
-TARGET_JOB_TITLE_KEYWORDS = ["Analista de BI", "Business Intelligence", "BI Analyst", "Inteligência de Negócios", "Data Analyst"]
+TARGET_JOB_TITLE_KEYWORDS = ["Analista de Negócios", "Analista de Business Intelligence", "Analista de Dados", "CRM", "Produto"]
 PREVIOUS_JOBS_FILE = "previous_bi_jobs.json" # Nome do arquivo para armazenar vagas anteriores
 
 def get_ifood_job_listings(url, keywords):
