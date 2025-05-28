@@ -2,10 +2,8 @@ name: Scrape iFood BI Jobs and Email
 
 on:
   schedule:
-    # Rodar a cada 4 horas.
-    # Por exemplo, às 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC.
-    - cron: '0 */4 * * *' # <-- ALTERADO PARA RODAR A CADA 4 HORAS
-  workflow_dispatch: # Permite executar o workflow manualmente
+    - cron: '0 */4 * * *' 
+  workflow_dispatch: 
 
 jobs:
   scrape_and_send:
@@ -15,18 +13,23 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Download previous jobs history # <--- NOVO PASSO
+      uses: actions/download-artifact@v4
+      with:
+        name: bi-jobs-history
+        path: . # Baixa o arquivo para a raiz do repositório
+      continue-on-error: true # Permite que o workflow continue mesmo se o artefato não for encontrado (primeira execução)
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.9' # Use a versão do Python que preferir, e.g., '3.10', '3.11'
+        python-version: '3.9'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # requirements.txt agora está na raiz do repositório
         pip install -r requirements.txt 
-
-        # Instalar o Chrome e dependências essenciais
+        
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable fonts-liberation libnspr4 libnss3 lsb-release wget gnupg
 
@@ -36,5 +39,10 @@ jobs:
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
       run: |
-        # main.py agora está na raiz do repositório
-        python main.py
+        python main.py 
+
+    - name: Upload current jobs history # <--- NOVO PASSO
+      uses: actions/upload-artifact@v4
+      with:
+        name: bi-jobs-history
+        path: previous_bi_jobs.json
