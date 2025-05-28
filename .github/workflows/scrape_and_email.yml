@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Debug - List repository root after checkout # <--- NOVO PASSO DE DEPURACAO
+    - name: Debug - List repository root after checkout
       run: |
         echo "Conteúdo da raiz do repositório APÓS checkout:"
         pwd
@@ -23,10 +23,10 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: bi-jobs-history
-        path: . 
+        path: carreiras.ifood # <--- AQUI! Baixa para dentro da subpasta
       continue-on-error: true
 
-    - name: Debug - List repository root after download # <--- NOVO PASSO DE DEPURACAO
+    - name: Debug - List repository root after download
       run: |
         echo "Conteúdo da raiz do repositório APÓS download de artefato:"
         pwd
@@ -38,16 +38,18 @@ jobs:
         python-version: '3.9'
 
     - name: Install dependencies
+      working-directory: carreiras.ifood # <--- NOVO! Força a trabalhar nesta pasta
       run: |
         echo "Caminho atual para pip install:"
         pwd
         python -m pip install --upgrade pip
-        pip install -r requirements.txt # <--- Continua aqui. Se main.py e requirements.txt estiverem na raiz, isso funcionará.
+        pip install -r requirements.txt
         
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable fonts-liberation libnspr4 libnss3 lsb-release wget gnupg
 
     - name: Run scraper and send email
+      working-directory: carreiras.ifood # <--- NOVO! Força a trabalhar nesta pasta
       env:
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
@@ -66,6 +68,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: bi-jobs-history
-        path: previous_bi_jobs.json # <--- AQUI DEVE ENCONTRAR O ARQUIVO
-        # Adicione o if-no-files-found para depuração
-        if-no-files-found: warn # Não falha, mas avisa se o arquivo não for encontrado
+        path: carreiras.ifood/previous_bi_jobs.json # <--- AQUI! Aponta para dentro da subpasta
+        if-no-files-found: warn
