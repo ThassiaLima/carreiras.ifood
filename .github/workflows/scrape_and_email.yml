@@ -2,49 +2,60 @@ name: Scrape iFood BI Jobs and Email
 
 on:
   schedule:
-    - cron: '0 */4 * * *' # Roda a cada 4 horas (0, 4, 8, 12, 16, 20)
-  workflow_dispatch: # Permite acionar manualmente o workflow
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
 
 jobs:
   scrape_and_send:
-    runs-on: ubuntu-latest # Usa o sistema operacional Ubuntu mais recente
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4 # Clona o repositório
+      uses: actions/checkout@v4
 
     - name: Debug - List repository root after checkout
       run: |
         echo "Conteúdo da raiz do repositório APÓS checkout:"
         pwd
         ls -la
+        echo "Conteúdo de carreiras.ifood/ APÓS checkout:"
+        ls -la carreiras.ifood/ || echo "Subpasta carreiras.ifood/ NÃO encontrada na raiz (isto é inesperado se o erro persistir)."
+
 
     - name: Download previous jobs history
       uses: actions/download-artifact@v4
       with:
         name: bi-jobs-history
-        path: . # Baixa o artefato para a raiz do repositório
-      continue-on-error: true # Continua mesmo se o artefato não for encontrado (na primeira execução)
+        path: carreiras.ifood/
+      continue-on-error: true
 
     - name: Debug - List repository root after download
       run: |
         echo "Conteúdo da raiz do repositório APÓS download de artefato:"
         pwd
-        ls -la
+        echo "Conteúdo de carreiras.ifood/ APÓS download de artefato:"
+        ls -la carreiras.ifood/
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.9' # Define a versão do Python
+        python-version: '3.9'
 
     - name: Install dependencies
       run: |
-        echo "Caminho atual para pip install:"
+        echo "Caminho atual antes de instalar dependências:"
         pwd
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt # Instala as dependências do requirements.txt
+        cd carreiras.ifood/ # <--- Entra na subpasta
+        echo "Caminho atual após cd para instalar dependências:"
+        pwd
         
-        # Instala dependências do Chrome para Selenium
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt # Agora busca na pasta atual (carreiras.ifood/)
+        
+        cd .. # <--- Volta para a raiz do WORKDIR
+        echo "Caminho atual após voltar para a raiz:"
+        pwd
+        
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable fonts-liberation libnspr4 libnss3 lsb-release wget gnupg
 
@@ -54,18 +65,26 @@ jobs:
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
       run: |
-        echo "Caminho atual para python main.py:"
+        echo "Caminho atual antes de rodar o scraper:"
         pwd
-        python main.py # Executa o script Python principal
+        cd carreiras.ifood/ # <--- Entra na subpasta
+        echo "Caminho atual após cd para rodar o scraper:"
+        pwd
         
-        echo "Verificando se previous_bi_jobs.json foi criado na pasta atual:"
+        python main.py # Agora busca na pasta atual (carreiras.ifood/)
+        
+        echo "Verificando se previous_bi_jobs.json foi criado na pasta atual (carreiras.ifood/):"
         ls -la previous_bi_jobs.json || echo "previous_bi_jobs.json NÃO ENCONTRADO NA PASTA ATUAL!"
-        echo "Conteúdo da pasta atual APÓS a execução do script Python:"
+        echo "Conteúdo da pasta atual (carreiras.ifood/) APÓS a execução do script Python:"
         ls -la .
+        
+        cd .. # <--- Volta para a raiz do WORKDIR
+        echo "Caminho atual após voltar para a raiz antes de upload:"
+        pwd
 
     - name: Upload current jobs history
       uses: actions/upload-artifact@v4
       with:
         name: bi-jobs-history
-        path: previous_bi_jobs.json # Sobe o arquivo previous_bi_jobs.json como um artefato
-        if-no-files-found: warn # Avisa se o arquivo não for encontrado, mas não falha o workflow
+        path: carreiras.ifood/previous_bi_jobs.json
+        if-no-files-found: warn
