@@ -148,4 +148,96 @@ def get_ifood_job_listings(url, keywords):
             driver.quit()
             print("Navegador Selenium fechado.")
 
-def send_email(sender_email, sender_password, receiver_email, subject,
+def send_email(sender_email, sender_password, receiver_email, subject, body_html):
+    """
+    Envia um e-mail com conteúdo HTML.
+    """
+    msg = MIMEMultipart("alternative")
+    msg["From"] = sender_email
+    msg["To"] = receiver_email
+    msg["Subject"] = subject
+
+    msg.attach(MIMEText(body_html, "html"))
+
+    try:
+        server = smtplib.SMTP_SSL("smtp.gmail.com", 465) 
+        server.login(sender_email, sender_password)
+        text = msg.as_string()
+        server.sendmail(sender_email, receiver_email, text)
+        print(f"\nE-mail enviado com sucesso para {receiver_email}!")
+    except Exception as e:
+        print(f"\nErro ao enviar e-mail: {e}")
+        print(f"Detalhes do erro: {e.__class__.__name__}: {e}")
+        print("Verifique suas credenciais de e-mail e configurações de segurança (ex: senha de app do Gmail).")
+    finally:
+        if 'server' in locals() and server: 
+            server.quit()
+            print("Conexão SMTP fechada.")
+
+# --- Funções para gerenciar o histórico de vagas ---
+def load_previous_jobs(file_path):
+    """Carrega vagas de um arquivo JSON."""
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                jobs = json.load(f)
+                print(f"Carregadas {len(jobs)} vagas de '{file_path}'.")
+                return jobs
+        except json.JSONDecodeError:
+            print(f"Aviso: Arquivo '{file_path}' está corrompido ou vazio. Iniciando do zero.")
+            return []
+    print(f"Arquivo '{file_path}' não encontrado. Iniciando a busca do zero.")
+    return []
+
+def save_current_jobs(file_path, jobs):
+    """Salva vagas em um arquivo JSON."""
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(jobs, f, indent=4, ensure_ascii=False)
+    print(f"Salvas {len(jobs)} vagas em '{file_path}'.")
+
+def find_new_jobs(current_jobs, previous_jobs):
+    """Compara as vagas atuais com as anteriores e retorna apenas as novas."""
+    previous_jobs_set = {frozenset(job.items()) for job in previous_jobs} # Converte para set de frozensets para comparação
+    new_jobs = []
+    for job in current_jobs:
+        if frozenset(job.items()) not in previous_jobs_set:
+            new_jobs.append(job)
+    return new_jobs
+
+# --- Execução principal ---
+if __name__ == "__main__":
+    previous_bi_jobs = load_previous_jobs(PREVIOUS_JOBS_FILE)
+    current_bi_jobs = get_ifood_job_listings(URL, TARGET_JOB_TITLE_KEYWORDS)
+    
+    # Salvar as vagas atuais para a próxima execução (mesmo que não haja novas para enviar e-mail)
+    save_current_jobs(PREVIOUS_JOBS_FILE, current_bi_jobs)
+
+    if not current_bi_jobs:
+        print("Nenhuma vaga de BI encontrada na raspagem atual.")
+        # Podemos optar por não enviar e-mail se não houver vagas ativas, ou enviar um e-mail de "nada encontrado"
+        # Se você quiser um email de "nada encontrado", descomente a linha abaixo:
+        # send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, "<html><body>Nenhuma vaga de Analista de BI encontrada no iFood hoje.</body></html>")
+    else:
+        new_bi_jobs = find_new_jobs(current_bi_jobs, previous_bi_jobs)
+        
+        if new_bi_jobs:
+            print(f"\n--- {len(new_bi_jobs)} NOVAS Vagas de BI Encontradas no iFood! ---")
+            email_body_html = "<html><body>"
+            email_body_html += "<h2>🚨 Novas Vagas de Analista de BI no iFood! 🚨</h2>"
+            email_body_html += "<p>Confira as vagas que foram publicadas desde a última busca:</p>"
+            email_body_html += "<ul>"
+            for job in new_bi_jobs:
+                print(f"- Título: {job['title']}")
+                print(f"  Link: {job['link']}\n")
+                email_body_html += f"<li><b>{job['title']}</b>: <a href='{job['link']}'>{job['link']}</a></li>"
+            email_body_html += "</ul>"
+            email_body_html += "<p><i>Este é um e-mail automático.</i></p>"
+            email_body_html += "</body></html>"
+            
+            send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, email_body_html)
+
+        else:
+            print("\n--- Nenhuma vaga nova de 'Analista de BI' (ou similar) foi encontrada no iFood. ---")
+            # Nenhuma nova vaga, então não enviamos e-mail para evitar spam desnecessário.
+            # Se você quiser receber um e-mail informando que não há novas vagas, descomente a linha abaixo:
+            # send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, "<html><body>Nenhuma nova vaga de Analista de BI foi encontrada no iFood desde a última busca.</body></html>")
