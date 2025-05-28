@@ -2,8 +2,8 @@ name: Scrape iFood BI Jobs and Email
 
 on:
   schedule:
-    - cron: '0 */4 * * *' 
-  workflow_dispatch: 
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
 
 jobs:
   scrape_and_send:
@@ -23,14 +23,16 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: bi-jobs-history
-        path: carreiras.ifood # <--- AQUI! Baixa para dentro da subpasta
+        # O artefato será baixado para a raiz do WORKDIR do runner
+        # mas precisa ser colocado na subpasta carreiras.ifood/
+        path: carreiras.ifood/ # <--- Ajustado para baixar PARA DENTRO da subpasta
       continue-on-error: true
 
     - name: Debug - List repository root after download
       run: |
         echo "Conteúdo da raiz do repositório APÓS download de artefato:"
         pwd
-        ls -la
+        ls -la carreiras.ifood/ # <--- Adicionado para listar o conteúdo da subpasta também
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -38,18 +40,18 @@ jobs:
         python-version: '3.9'
 
     - name: Install dependencies
-      working-directory: carreiras.ifood # <--- NOVO! Força a trabalhar nesta pasta
+      # REMOVIDO: working-directory: carreiras.ifood
       run: |
         echo "Caminho atual para pip install:"
         pwd
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        # O requirements.txt está dentro da subpasta carreiras.ifood/
+        pip install -r carreiras.ifood/requirements.txt # <--- Ajustado o caminho
         
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable fonts-liberation libnspr4 libnss3 lsb-release wget gnupg
 
     - name: Run scraper and send email
-      working-directory: carreiras.ifood # <--- NOVO! Força a trabalhar nesta pasta
+      # REMOVIDO: working-directory: carreiras.ifood
       env:
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
@@ -57,16 +59,18 @@ jobs:
       run: |
         echo "Caminho atual para python main.py:"
         pwd
-        python main.py
+        # O main.py está dentro da subpasta carreiras.ifood/
+        python carreiras.ifood/main.py # <--- Ajustado o caminho
         
-        echo "Verificando se previous_bi_jobs.json foi criado na pasta atual:"
-        ls -la previous_bi_jobs.json || echo "previous_bi_jobs.json NÃO ENCONTRADO NA PASTA ATUAL!"
-        echo "Conteúdo da pasta atual APÓS a execução do script Python:"
-        ls -la .
+        echo "Verificando se previous_bi_jobs.json foi criado na pasta da subpasta:"
+        ls -la carreiras.ifood/previous_bi_jobs.json || echo "previous_bi_jobs.json NÃO ENCONTRADO NA SUBPASTA!"
+        echo "Conteúdo da subpasta atual APÓS a execução do script Python:"
+        ls -la carreiras.ifood/
 
     - name: Upload current jobs history
       uses: actions/upload-artifact@v4
       with:
         name: bi-jobs-history
-        path: carreiras.ifood/previous_bi_jobs.json # <--- AQUI! Aponta para dentro da subpasta
+        # O arquivo previous_bi_jobs.json será criado dentro da subpasta carreiras.ifood/
+        path: carreiras.ifood/previous_bi_jobs.json # <--- Ajustado para buscar dentro da subpasta
         if-no-files-found: warn
