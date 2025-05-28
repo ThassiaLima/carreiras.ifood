@@ -221,9 +221,9 @@ if __name__ == "__main__":
         new_bi_jobs = find_new_jobs(current_bi_jobs, previous_bi_jobs)
         
         if new_bi_jobs:
-            print(f"\n--- {len(new_bi_jobs)} NOVAS Vagas de BI Encontradas no iFood! ---")
+            print(f"\n--- {len(new_bi_jobs)} 🍟 NOVAS Vagas do carreiras iFood!🍟 ---")
             email_body_html = "<html><body>"
-            email_body_html += "<h2>🚨 Novas Vagas de Analista de BI no iFood! 🚨</h2>"
+            email_body_html += "<h2>🚨 Novas Vagas no portal de carreiras iFood! 🚨</h2>"
             email_body_html += "<p>Confira as vagas que foram publicadas desde a última busca:</p>"
             email_body_html += "<ul>"
             for job in new_bi_jobs:
@@ -231,7 +231,7 @@ if __name__ == "__main__":
                 print(f"  Link: {job['link']}\n")
                 email_body_html += f"<li><b>{job['title']}</b>: <a href='{job['link']}'>{job['link']}</a></li>"
             email_body_html += "</ul>"
-            email_body_html += "<p><i>Este é um e-mail automático.</i></p>"
+            email_body_html += "<p><i>Este é um e-mail do seu monitor de vagas do carreira.ifood 🍟</i></p>"
             email_body_html += "</body></html>"
             
             send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, email_body_html)
