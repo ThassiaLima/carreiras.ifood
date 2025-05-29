@@ -115,8 +115,8 @@
         "title": "analista de negócios júnior",
         "link": "https://carreiras.ifood.com.br/en/job/7985734002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-05-29",
+        "status": "fechada"
     },
     {
         "title": "analista de negócios júnior - integração",
@@ -150,8 +150,8 @@
         "title": "analista de negócios pleno",
         "link": "https://carreiras.ifood.com.br/en/job/7771103002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-05-29",
+        "status": "fechada"
     },
     {
         "title": "analista de negócios pleno",
@@ -226,6 +226,27 @@
     {
         "title": "product manager sênior (produtos tributários)",
         "link": "https://carreiras.ifood.com.br/en/job/7944871002/",
+        "date_entrada": "2025-05-29",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de business intelligence júnior",
+        "link": "https://carreiras.ifood.com.br/en/job/8005776002/",
+        "date_entrada": "2025-05-29",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "designer de produto sênior (vaga afirmativa para mulheres e pessoas negras)",
+        "link": "https://carreiras.ifood.com.br/en/job/7944525002/",
+        "date_entrada": "2025-05-29",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "ifood pago - analista de negócios pleno - cartões",
+        "link": "https://carreiras.ifood.com.br/en/job/8007514002/",
         "date_entrada": "2025-05-29",
         "date_saida": null,
         "status": "ativa"
