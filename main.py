@@ -107,7 +107,16 @@ def load_previous_jobs(file_path):
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
+                jobs = json.load(f)
+                # Normalizar campos ausentes
+                for job in jobs:
+                    if "status" not in job:
+                        job["status"] = "ativa"
+                    if "data_entrada" not in job:
+                        job["data_entrada"] = str(date.today())
+                    if "data_saida" not in job:
+                        job["data_saida"] = None
+                return jobs
         except json.JSONDecodeError:
             return []
     return []
