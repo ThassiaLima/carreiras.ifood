@@ -22,7 +22,7 @@ EMAIL_SUBJECT = "Novas Vagas de Analista de BI no iFood!"
 
 # --- CONFIGURAÇÕES DE RASPAGEM ---
 URL = "https://carreiras.ifood.com.br/"
-TARGET_JOB_TITLE_KEYWORDS = ["Analista de BI", "Business Intelligence", "BI Analyst", "Inteligência de Negócios", "Data Analyst"]
+TARGET_JOB_TITLE_KEYWORDS = ["Analista de Negócios", "Analista de Business Intelligence", "Analista de Dados", "CRM", "Produto"]
 PREVIOUS_JOBS_FILE = "previous_bi_jobs.json"
 
 def get_ifood_job_listings(url, keywords):
@@ -265,17 +265,17 @@ if __name__ == "__main__":
 
     # Enviar e-mail apenas com as vagas NOVAS
     if new_jobs_to_notify:
-        print(f"\n--- {len(new_jobs_to_notify)} NOVAS Vagas de BI Encontradas no iFood para Notificação! ---")
+        print(f"\n--- {len(new_jobs_to_notify)} 🍟 Novas Vagas carreira iFood encontradas ---")
         email_body_html = "<html><body>"
-        email_body_html += "<h2>🚨 Novas Vagas de Analista de BI no iFood! 🚨</h2>"
+        email_body_html += "<h2>🍟 Novas vagas no portal de carreira iFood! 🍟</h2>"
         email_body_html += "<p>Confira as vagas que foram publicadas desde a última busca:</p>"
         email_body_html += "<ul>"
         for job in new_jobs_to_notify:
             print(f"- Título: {job['title']}")
             print(f"  Link: {job['link']}\n")
-            email_body_html += f"<li><b>{job['title']}</b>: <a href='{job['link']}'>{job['link']}</a> (Publicada em: {job['date_entrada']})</li>"
+            email_body_html += f"<li><b>{job['title']}</b>: <a href='{job['link']}'>{job['link']}</a> </li>"
         email_body_html += "</ul>"
-        email_body_html += "<p><i>Este é um e-mail automático.</i></p>"
+        email_body_html += "<p><i>Este é um e-mail do seu monitor de vagas iFood.</i></p>"
         email_body_html += "</body></html>"
         
         send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, email_body_html)
