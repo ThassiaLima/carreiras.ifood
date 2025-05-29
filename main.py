@@ -57,30 +57,36 @@ def get_ifood_job_listings(url, keywords):
             print("Nenhum botão de aceitar cookies detectado ou clicável (ou já aceito). Prosseguindo.")
             pass
 
-        try:
+       try:
+            # Tentar encontrar o campo de busca pelo ID primário
             search_input = wait.until(EC.element_to_be_clickable((By.ID, "keyword-search-input")))
             print(f"Campo de busca ('keyword-search-input') encontrado.")
-            
-            search_term = keywords[0]
-            print(f"Digitando '{search_term}' no campo de busca e pressionando ENTER...")
-            search_input.send_keys(search_term)
-            search_input.send_keys(Keys.ENTER)
-            
-            time.sleep(5)
-            print("Busca acionada. Aguardando resultados...")
+        except:
+            # Se não encontrar pelo ID, tentar por um XPath mais genérico que contenha um placeholder "Cargo, palavra-chave ou empresa"
+            print("Campo de busca por ID não encontrado, tentando por placeholder de texto...")
+            search_input = wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Cargo, palavra-chave ou empresa']")))
+            print(f"Campo de busca por placeholder encontrado.")
 
-            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "ul.sc-ienWRC")))
-            print("Contêiner principal de vagas (ul.sc-ienWRC) detectado após a busca.")
-            
-            wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "ul.sc-ienWRC li")))
-            print("Pelo menos uma vaga (<li>) detectada e visível dentro do contêiner após a busca.")
-            
-            print("Pausa estratégica de 10 segundos antes de parsear o HTML para garantir que o DOM esteja totalmente estável.")
-            time.sleep(10) 
+        search_term = keywords[0]
+        print(f"Digitando '{search_term}' no campo de busca e pressionando ENTER...")
+        search_input.send_keys(search_term)
+        search_input.send_keys(Keys.ENTER)
+        
+        time.sleep(5)
+        print("Busca acionada. Aguardando resultados...")
 
-        except Exception as e:
-            print(f"**Aviso:** Falha ao usar o campo de busca ou ao encontrar os elementos das vagas após a busca. Erro: {e}")
-            print("Isso pode significar que o seletor do campo de busca mudou ou a página de resultados é diferente.")
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "ul.sc-ienWRC")))
+        print("Contêiner principal de vagas (ul.sc-ienWRC) detectado após a busca.")
+        
+        wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, "ul.sc-ienWRC li")))
+        print("Pelo menos uma vaga (<li>) detectada e visível dentro do contêiner após a busca.")
+        
+        print("Pausa estratégica de 10 segundos antes de parsear o HTML para garantir que o DOM esteja totalmente estável.")
+        time.sleep(10) 
+
+    except Exception as e: # Este catch agora pega qualquer erro na interação com o campo de busca e elementos subsequentes
+        print(f"**Aviso Crítico:** Falha ao usar o campo de busca ou ao encontrar os elementos das vagas após a busca. Erro: {e}")
+        print("Isso pode significar que o seletor do campo de busca mudou ou a página de resultados é diferente. Continuando para tentar parsear o HTML existente.")
         
         try:
             with open("page_source_after_search_simplified.html", "w", encoding="utf-8") as f:
