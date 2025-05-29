@@ -57,7 +57,7 @@ def get_ifood_job_listings(url, keywords):
             print("Nenhum botão de aceitar cookies detectado ou clicável (ou já aceito). Prosseguindo.")
             pass
 
-       try:
+        try:
             # Tentar encontrar o campo de busca pelo ID primário
             search_input = wait.until(EC.element_to_be_clickable((By.ID, "keyword-search-input")))
             print(f"Campo de busca ('keyword-search-input') encontrado.")
@@ -84,78 +84,82 @@ def get_ifood_job_listings(url, keywords):
         print("Pausa estratégica de 10 segundos antes de parsear o HTML para garantir que o DOM esteja totalmente estável.")
         time.sleep(10) 
 
-    except Exception as e: # Este catch agora pega qualquer erro na interação com o campo de busca e elementos subsequentes
+        # O bloco 'except' para falha na busca foi movido para fora do try/except interno
+        # para pegar erros gerais na interação com o campo de busca e elementos subsequentes.
+    except Exception as e:
         print(f"**Aviso Crítico:** Falha ao usar o campo de busca ou ao encontrar os elementos das vagas após a busca. Erro: {e}")
         print("Isso pode significar que o seletor do campo de busca mudou ou a página de resultados é diferente. Continuando para tentar parsear o HTML existente.")
-        
-        try:
-            with open("page_source_after_search_simplified.html", "w", encoding="utf-8") as f:
-                f.write(driver.page_source)
-            print("HTML da página (após busca) salvo em 'page_source_after_search_simplified.html' para depuração.")
-        except Exception as e:
-            print(f"Não foi possível salvar page_source para depuração: {e}")
-
-        last_height = driver.execute_script("return document.body.scrollHeight")
-        scroll_attempts = 0
-        while scroll_attempts < 5: 
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(2) 
-            new_height = driver.execute_script("return document.body.scrollHeight")
-            if new_height == last_height:
-                print("Altura da página não mudou, presumindo que todas as vagas foram carregadas.")
-                break 
-            last_height = new_height
-            scroll_attempts += 1
-        print("Rolagem da página concluída (se aplicável).")
-        
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-
-        job_listings_elements = soup.select("ul.sc-ienWRC li") 
-
-        print(f"Total de elementos de vaga (<li>) encontrados via BeautifulSoup: {len(job_listings_elements)}")
-
-        if not job_listings_elements:
-            print("Aviso: Nenhum elemento <li> de vaga encontrado no HTML raspado. Isso é crítico.")
-            return []
-
-        for job_element in job_listings_elements:
-            title_link_tag = job_element.select_one("h4 a")
-            if title_link_tag and 'href' in title_link_tag.attrs:
-                title = title_link_tag.get_text(strip=True)
-                link = title_link_tag['href']
-                if not link.startswith('http'): 
-                    link = URL.rstrip('/') + link 
-                
-                job_data = {
-                    "title": title,
-                    "link": link
-                    # Data e status serão adicionados na lógica principal
-                }
-                all_jobs.append(job_data)
-            else:
-                print(f"  Aviso: Elemento de vaga (<li>) encontrado sem link ou título principal válido. Conteúdo parcial: {job_element.prettify()[:200]}...")
-
-        bi_jobs_filtered = []
-        print("\n--- FILTRANDO POR VAGAS DE ANALISTA DE BI ---")
-        for job in all_jobs:
-            found_keyword = False
-            for keyword in keywords:
-                if keyword.lower() in job['title'].lower():
-                    found_keyword = True
-                    break
-            if found_keyword:
-                bi_jobs_filtered.append(job)
-        
-        return bi_jobs_filtered
-
+    
+    # Continuar processando o HTML, mesmo que a busca tenha falhado parcialmente,
+    # para depurar ou tentar raspar o que está visível.
+    try:
+        with open("page_source_after_search_simplified.html", "w", encoding="utf-8") as f:
+            f.write(driver.page_source)
+        print("HTML da página (após busca) salvo em 'page_source_after_search_simplified.html' para depuração.")
     except Exception as e:
-        print(f"Ocorreu um erro geral durante a execução do Selenium: {e}")
-        return []
-    finally:
-        if driver:
-            driver.quit()
-            print("Navegador Selenium fechado.")
+        print(f"Não foi possível salvar page_source para depuração: {e}")
 
+    last_height = driver.execute_script("return document.body.scrollHeight")
+    scroll_attempts = 0
+    while scroll_attempts < 5: 
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2) 
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            print("Altura da página não mudou, presumindo que todas as vagas foram carregadas.")
+            break 
+        last_height = new_height
+        scroll_attempts += 1
+    print("Rolagem da página concluída (se aplicável).")
+    
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+    job_listings_elements = soup.select("ul.sc-ienWRC li") 
+
+    print(f"Total de elementos de vaga (<li>) encontrados via BeautifulSoup: {len(job_listings_elements)}")
+
+    if not job_listings_elements:
+        print("Aviso: Nenhum elemento <li> de vaga encontrado no HTML raspado. Isso é crítico.")
+        # Considerar retornar aqui se nenhuma vaga for encontrada para evitar processamento inútil
+        # ou se o erro de busca for muito grave
+        # return [] 
+
+    for job_element in job_listings_elements:
+        title_link_tag = job_element.select_one("h4 a")
+        if title_link_tag and 'href' in title_link_tag.attrs:
+            title = title_link_tag.get_text(strip=True)
+            link = title_link_tag['href']
+            if not link.startswith('http'): 
+                link = URL.rstrip('/') + link 
+            
+            job_data = {
+                "title": title,
+                "link": link
+                # Data e status serão adicionados na lógica principal
+            }
+            all_jobs.append(job_data)
+        else:
+            print(f"  Aviso: Elemento de vaga (<li>) encontrado sem link ou título principal válido. Conteúdo parcial: {job_element.prettify()[:200]}...")
+
+    bi_jobs_filtered = []
+    print("\n--- FILTRANDO POR VAGAS DE ANALISTA DE BI ---")
+    for job in all_jobs:
+        found_keyword = False
+        for keyword in keywords:
+            if keyword.lower() in job['title'].lower():
+                found_keyword = True
+                break
+        if found_keyword:
+            bi_jobs_filtered.append(job)
+    
+    # Certifica-se que o driver sempre fecha, mesmo que as etapas de raspagem falhem
+    if driver:
+        driver.quit()
+        print("Navegador Selenium fechado.")
+        
+    return bi_jobs_filtered
+
+# Esta função send_email não foi modificada
 def send_email(sender_email, sender_password, receiver_email, subject, body_html):
     """
     Envia um e-mail com conteúdo HTML.
@@ -210,15 +214,16 @@ if __name__ == "__main__":
     current_scraped_jobs_simple = get_ifood_job_listings(URL, TARGET_JOB_TITLE_KEYWORDS)
 
     # Convertendo as vagas raspadas para um formato fácil de comparar (apenas título e link)
-    current_scraped_jobs_set = {frozenset({'title': job['title'], 'link': job['link']}.items()) for job in current_scraped_jobs_simple}
+    # É importante usar um identificador único, e o link é o mais confiável.
+    current_scraped_jobs_links = {job['link'] for job in current_scraped_jobs_simple}
     
     new_jobs_to_notify = [] # Vagas que são novas NESTA execução e precisam ser notificadas
 
     # Passo 1: Marcar vagas que deixaram de aparecer como 'fechada'
     for job_in_history in all_jobs_history:
         # Se a vaga estava ativa e não foi encontrada na raspagem atual
-        if job_in_history['status'] == 'ativa' and \
-           frozenset({'title': job_in_history['title'], 'link': job_in_history['link']}.items()) not in current_scraped_jobs_set:
+        # Verifica pelo link, pois é o identificador único
+        if job_in_history['status'] == 'ativa' and job_in_history['link'] not in current_scraped_jobs_links:
             
             job_in_history['status'] = 'fechada'
             job_in_history['date_saida'] = today
