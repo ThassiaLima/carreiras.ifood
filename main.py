@@ -1,5 +1,5 @@
 import os
-import json # Importar a biblioteca json
+import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -12,6 +12,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from datetime import datetime # Importar datetime
 
 # --- CONFIGURAÇÕES DE E-MAIL ---
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
@@ -21,8 +22,8 @@ EMAIL_SUBJECT = "Novas Vagas de Analista de BI no iFood!"
 
 # --- CONFIGURAÇÕES DE RASPAGEM ---
 URL = "https://carreiras.ifood.com.br/"
-TARGET_JOB_TITLE_KEYWORDS = ["Analista de Negócios", "Analista de Business Intelligence", "Analista de Dados", "CRM", "Produto"]
-PREVIOUS_JOBS_FILE = "previous_bi_jobs.json" # Nome do arquivo para armazenar vagas anteriores
+TARGET_JOB_TITLE_KEYWORDS = ["Analista de BI", "Business Intelligence", "BI Analyst", "Inteligência de Negócios", "Data Analyst"]
+PREVIOUS_JOBS_FILE = "previous_bi_jobs.json"
 
 def get_ifood_job_listings(url, keywords):
     print(f"\nIniciando raspagem de vagas em: {url}")
@@ -122,6 +123,7 @@ def get_ifood_job_listings(url, keywords):
                 job_data = {
                     "title": title,
                     "link": link
+                    # Data e status serão adicionados na lógica principal
                 }
                 all_jobs.append(job_data)
             else:
@@ -175,69 +177,97 @@ def send_email(sender_email, sender_password, receiver_email, subject, body_html
             print("Conexão SMTP fechada.")
 
 # --- Funções para gerenciar o histórico de vagas ---
-def load_previous_jobs(file_path):
-    """Carrega vagas de um arquivo JSON."""
+def load_all_jobs_history(file_path):
+    """Carrega todo o histórico de vagas de um arquivo JSON."""
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
-                jobs = json.load(f)
-                print(f"Carregadas {len(jobs)} vagas de '{file_path}'.")
-                return jobs
+                history = json.load(f)
+                print(f"Carregado histórico com {len(history)} vagas de '{file_path}'.")
+                return history
         except json.JSONDecodeError:
-            print(f"Aviso: Arquivo '{file_path}' está corrompido ou vazio. Iniciando do zero.")
+            print(f"Aviso: Arquivo '{file_path}' está corrompido ou vazio. Iniciando um histórico vazio.")
             return []
-    print(f"Arquivo '{file_path}' não encontrado. Iniciando a busca do zero.")
+    print(f"Arquivo '{file_path}' não encontrado. Iniciando um histórico vazio.")
     return []
 
-def save_current_jobs(file_path, jobs):
-    """Salva vagas em um arquivo JSON."""
+def save_all_jobs_history(file_path, history):
+    """Salva todo o histórico de vagas em um arquivo JSON."""
     with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(jobs, f, indent=4, ensure_ascii=False)
-    print(f"Salvas {len(jobs)} vagas em '{file_path}'.")
-
-def find_new_jobs(current_jobs, previous_jobs):
-    """Compara as vagas atuais com as anteriores e retorna apenas as novas."""
-    previous_jobs_set = {frozenset(job.items()) for job in previous_jobs} # Converte para set de frozensets para comparação
-    new_jobs = []
-    for job in current_jobs:
-        if frozenset(job.items()) not in previous_jobs_set:
-            new_jobs.append(job)
-    return new_jobs
+        json.dump(history, f, indent=4, ensure_ascii=False)
+    print(f"Salvo histórico com {len(history)} vagas em '{file_path}'.")
 
 # --- Execução principal ---
 if __name__ == "__main__":
-    previous_bi_jobs = load_previous_jobs(PREVIOUS_JOBS_FILE)
-    current_bi_jobs = get_ifood_job_listings(URL, TARGET_JOB_TITLE_KEYWORDS)
+    today = datetime.now().strftime('%Y-%m-%d')
+    all_jobs_history = load_all_jobs_history(PREVIOUS_JOBS_FILE) # Carrega todo o histórico
+    current_scraped_jobs_simple = get_ifood_job_listings(URL, TARGET_JOB_TITLE_KEYWORDS)
+
+    # Convertendo as vagas raspadas para um formato fácil de comparar (apenas título e link)
+    current_scraped_jobs_set = {frozenset({'title': job['title'], 'link': job['link']}.items()) for job in current_scraped_jobs_simple}
     
-    # Salvar as vagas atuais para a próxima execução (mesmo que não haja novas para enviar e-mail)
-    save_current_jobs(PREVIOUS_JOBS_FILE, current_bi_jobs)
+    new_jobs_to_notify = [] # Vagas que são novas NESTA execução e precisam ser notificadas
 
-    if not current_bi_jobs:
-        print("Nenhuma vaga de BI encontrada na raspagem atual.")
-        # Podemos optar por não enviar e-mail se não houver vagas ativas, ou enviar um e-mail de "nada encontrado"
-        # Se você quiser um email de "nada encontrado", descomente a linha abaixo:
-        # send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, "<html><body>Nenhuma vaga de Analista de BI encontrada no iFood hoje.</body></html>")
-    else:
-        new_bi_jobs = find_new_jobs(current_bi_jobs, previous_bi_jobs)
-        
-        if new_bi_jobs:
-            print(f"\n--- {len(new_bi_jobs)} 🍟 NOVAS Vagas do carreiras iFood!🍟 ---")
-            email_body_html = "<html><body>"
-            email_body_html += "<h2>🚨 Novas Vagas no portal de carreiras iFood! 🚨</h2>"
-            email_body_html += "<p>Confira as vagas que foram publicadas desde a última busca:</p>"
-            email_body_html += "<ul>"
-            for job in new_bi_jobs:
-                print(f"- Título: {job['title']}")
-                print(f"  Link: {job['link']}\n")
-                email_body_html += f"<li><b>{job['title']}</b>: <a href='{job['link']}'>{job['link']}</a></li>"
-            email_body_html += "</ul>"
-            email_body_html += "<p><i>Este é um e-mail do seu monitor de vagas do carreira.ifood 🍟</i></p>"
-            email_body_html += "</body></html>"
+    # Passo 1: Marcar vagas que deixaram de aparecer como 'fechada'
+    for job_in_history in all_jobs_history:
+        # Se a vaga estava ativa e não foi encontrada na raspagem atual
+        if job_in_history['status'] == 'ativa' and \
+           frozenset({'title': job_in_history['title'], 'link': job_in_history['link']}.items()) not in current_scraped_jobs_set:
             
-            send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, email_body_html)
+            job_in_history['status'] = 'fechada'
+            job_in_history['date_saida'] = today
+            print(f"Vaga marcada como FECHADA: {job_in_history['title']} - {job_in_history['link']}")
+    
+    # Passo 2: Adicionar novas vagas e identificar as que precisam ser notificadas
+    # Usaremos os links para identificar as vagas já conhecidas no histórico
+    existing_job_links_in_history = {job['link'] for job in all_jobs_history}
 
+    for scraped_job in current_scraped_jobs_simple:
+        if scraped_job['link'] not in existing_job_links_in_history:
+            # É uma vaga nova!
+            new_job_entry = {
+                "title": scraped_job['title'],
+                "link": scraped_job['link'],
+                "date_entrada": today,
+                "date_saida": None,
+                "status": "ativa"
+            }
+            all_jobs_history.append(new_job_entry)
+            new_jobs_to_notify.append(new_job_entry) # Adicionar para notificação
+            print(f"Nova vaga adicionada ao histórico e para notificação: {new_job_entry['title']}")
         else:
-            print("\n--- Nenhuma vaga nova de 'Analista de BI' (ou similar) foi encontrada no iFood. ---")
-            # Nenhuma nova vaga, então não enviamos e-mail para evitar spam desnecessário.
-            # Se você quiser receber um e-mail informando que não há novas vagas, descomente a linha abaixo:
-            # send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, "<html><body>Nenhuma nova vaga de Analista de BI foi encontrada no iFood desde a última busca.</body></html>")
+            # Vaga já existe no histórico, garantir que está ativa e com date_saida nula
+            # Isso é para o caso de uma vaga reabrir ou ter sido fechada erroneamente.
+            # Também para atualizar data_saida para null se foi marcada como fechada e reapareceu
+            for job_in_history in all_jobs_history:
+                if job_in_history['link'] == scraped_job['link']:
+                    if job_in_history['status'] == 'fechada':
+                        print(f"Vaga reaberta ou reapareceu: {job_in_history['title']}. Atualizando status para 'ativa' e date_saida para null.")
+                        job_in_history['status'] = 'ativa'
+                        job_in_history['date_saida'] = None
+                    # Não precisamos adicionar se já está ativa, apenas garantir que não foi marcada como fechada
+                    break
+
+
+    # Salvar o histórico COMPLETO e atualizado
+    save_all_jobs_history(PREVIOUS_JOBS_FILE, all_jobs_history)
+
+    # Enviar e-mail apenas com as vagas NOVAS
+    if new_jobs_to_notify:
+        print(f"\n--- {len(new_jobs_to_notify)} NOVAS Vagas de BI Encontradas no iFood para Notificação! ---")
+        email_body_html = "<html><body>"
+        email_body_html += "<h2>🚨 Novas Vagas de Analista de BI no iFood! 🚨</h2>"
+        email_body_html += "<p>Confira as vagas que foram publicadas desde a última busca:</p>"
+        email_body_html += "<ul>"
+        for job in new_jobs_to_notify:
+            print(f"- Título: {job['title']}")
+            print(f"  Link: {job['link']}\n")
+            email_body_html += f"<li><b>{job['title']}</b>: <a href='{job['link']}'>{job['link']}</a> (Publicada em: {job['date_entrada']})</li>"
+        email_body_html += "</ul>"
+        email_body_html += "<p><i>Este é um e-mail automático.</i></p>"
+        email_body_html += "</body></html>"
+        
+        send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, email_body_html)
+
+    else:
+        print("\n--- Nenhuma vaga nova de 'Analista de BI' (ou similar) foi encontrada no iFood. ---")
