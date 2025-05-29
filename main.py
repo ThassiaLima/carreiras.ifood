@@ -21,11 +21,16 @@ RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
 EMAIL_SUBJECT = "Novas Vagas de Analista de BI no iFood!"
 
 # --- CONFIGURAÇÕES DE RASPAGEM ---
-URL = "https://carreiras.ifood.com.br/"
+BASE_URL = "https://carreiras.ifood.com.br"
+URL = f"{BASE_URL}/"
 TARGET_JOB_TITLE_KEYWORDS = ["Analista de Negócios", "Analista de Business Intelligence", "Analista de Dados", "CRM", "Produto"]
 PREVIOUS_JOBS_FILE = "previous_bi_jobs.json"
 
-# --- Raspagem ---
+# --- Normalização de link ---
+def normalizar_link(link):
+    return link.replace("/en/", "/").rstrip("/")
+
+# --- Raspagem de vagas ---
 def get_ifood_job_listings(url, keywords):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -63,14 +68,16 @@ def get_ifood_job_listings(url, keywords):
             if title_link_tag and 'href' in title_link_tag.attrs:
                 title = title_link_tag.get_text(strip=True)
                 link = title_link_tag['href']
-                if not link.startswith('http'):
-                    link = URL.rstrip('/') + link
+                if not link.startswith("http"):
+                    link = BASE_URL + link  # Corrige link incompleto
+
                 job_data = {
                     "title": title,
-                    "link": link
+                    "link": normalizar_link(link)
                 }
                 all_jobs.append(job_data)
 
+        # Filtro por palavras-chave
         bi_jobs_filtered = []
         for job in all_jobs:
             if any(keyword.lower() in job['title'].lower() for keyword in keywords):
@@ -84,7 +91,7 @@ def get_ifood_job_listings(url, keywords):
     finally:
         driver.quit()
 
-# --- E-mail ---
+# --- Envio de e-mail ---
 def send_email(sender_email, sender_password, receiver_email, subject, body_html):
     msg = MIMEMultipart("alternative")
     msg["From"] = sender_email
@@ -102,13 +109,13 @@ def send_email(sender_email, sender_password, receiver_email, subject, body_html
     finally:
         server.quit()
 
-# --- Histórico ---
+# --- Carregar histórico ---
 def load_previous_jobs(file_path):
     if os.path.exists(file_path):
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 jobs = json.load(f)
-                # Normalizar campos ausentes
+                # Normalizar dados antigos
                 for job in jobs:
                     if "status" not in job:
                         job["status"] = "ativa"
@@ -116,38 +123,41 @@ def load_previous_jobs(file_path):
                         job["data_entrada"] = str(date.today())
                     if "data_saida" not in job:
                         job["data_saida"] = None
+                    job["link"] = normalizar_link(job["link"])
                 return jobs
         except json.JSONDecodeError:
             return []
     return []
 
+# --- Salvar histórico ---
 def save_current_jobs(file_path, jobs):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(jobs, f, indent=4, ensure_ascii=False)
 
+# --- Atualizar histórico completo ---
 def atualizar_historico_completo(current_jobs, historico_jobs):
     hoje = str(date.today())
-    links_atuais = {job['link'] for job in current_jobs}
+    links_atuais = {normalizar_link(job['link']) for job in current_jobs}
     novos_registros = []
 
-    # Marcar como fechadas as vagas que sumiram
     for vaga in historico_jobs:
-        if vaga["status"] == "ativa" and vaga["link"] not in links_atuais:
+        if vaga["status"] == "ativa" and normalizar_link(vaga["link"]) not in links_atuais:
             vaga["status"] = "fechada"
             vaga["data_saida"] = hoje
+            print(f"⛔ Vaga fechada: {vaga['title']}")
 
-    # Adicionar novas vagas
     for job in current_jobs:
-        if not any(v["link"] == job["link"] for v in historico_jobs):
+        if not any(normalizar_link(v["link"]) == normalizar_link(job["link"]) for v in historico_jobs):
             nova_vaga = {
                 "title": job["title"],
-                "link": job["link"],
+                "link": normalizar_link(job["link"]),
                 "data_entrada": hoje,
                 "data_saida": None,
                 "status": "ativa"
             }
             historico_jobs.append(nova_vaga)
             novos_registros.append(nova_vaga)
+            print(f"🆕 Nova vaga detectada: {nova_vaga['title']}")
 
     return historico_jobs, novos_registros
 
