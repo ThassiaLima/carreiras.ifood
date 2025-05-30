@@ -61,10 +61,20 @@ jobs:
         pwd
         python main.py # Executa o script principal diretamente da raiz
 
+    # NOVO PASSO: Upload para o Google Sheets
+    - name: Upload updated job history to Google Sheets
+      env:
+        GOOGLE_SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
+        GOOGLE_SHEETS_NAME: "ifood_bi_jobs_history" # Nome da sua planilha no Drive
+        SHEET_WORKSHEET_NAME: "Vagas" # Nome da aba na sua planilha
+      run: |
+        echo "Iniciando upload para o Google Sheets..."
+        python upload_to_sheets.py # Executa o novo script de upload
+
     - name: Commit updated previous_bi_jobs.json
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add previous_bi_jobs.json
-        git commit -m "Atualiza histórico de vagas BI [skip ci]" || true # '|| true' evita falha se não houver mudanças
+        git commit -m "Atualiza histórico de vagas BI [skip ci]" || true
         git push
