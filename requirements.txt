@@ -1,3 +1,5 @@
 selenium
 webdriver-manager
 beautifulsoup4
+gspread # Para interagir com Google Sheets
+oauth2client # Dependência do gspread para autenticação
