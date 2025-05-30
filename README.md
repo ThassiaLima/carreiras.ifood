@@ -1,6 +1,6 @@
 1. Visão Geral do Projeto
 Este projeto é um monitor automatizado de vagas de Analista de BI e áreas correlatas no portal de carreiras do iFood. Ele é projetado para raspar o site periodicamente, identificar novas vagas, monitorar o status das vagas existentes (ativas ou fechadas) e notificar o usuário por e-mail sobre as novas oportunidades encontradas. O histórico de todas as vagas monitoradas é mantido em um arquivo JSON local para análise de tendências futuras, que pode ser visualizado em ferramentas de BI como Power BI ou Google Looker Studio.
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________
 
 2. Estrutura do Repositório
 O repositório principal contém os seguintes arquivos essenciais:
@@ -9,7 +9,7 @@ O repositório principal contém os seguintes arquivos essenciais:
 -requirements.txt: Lista as dependências Python necessárias para o projeto.
 -.github/workflows/scrape_and_email.yml: O arquivo de configuração do GitHub Actions que automatiza a execução do main.py em um cronograma regular.
 
-_______________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________
 
 3. Detalhamento do Arquivo: main.py
 O arquivo main.py é o coração da automação. Ele orquestra todas as etapas do processo: desde a configuração do ambiente de raspagem até a gestão do histórico e a notificação.
@@ -153,7 +153,7 @@ Gerenciamento pelo Script:
 -O arquivo é sobrescrito com o histórico atualizado ao final de cada execução.
 -No GitHub Actions, um passo específico (Check for previous_bi_jobs.json and create if not exists) garante que, se o arquivo não existir (na primeira execução ou após um reset), ele será criado como um array JSON vazio ([]) para evitar erros.
 
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________
 
 5. Detalhamento do Arquivo: requirements.txt
 Caminho do Arquivo: requirements.txt
@@ -177,7 +177,7 @@ Uso no Projeto:
   -No ambiente de desenvolvimento local, você pode instalar todas as dependências listadas executando pip install -r requirements.txt.
   -No fluxo de trabalho do GitHub Actions (scrape_and_email.yml), o passo Install Python dependencies utiliza este arquivo para configurar o ambiente de execução antes de rodar o script main.py.
 
-___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________
 
 6. Detalhamento do Arquivo: scrape_and_email.yml
 Caminho do Arquivo: .github/workflows/scrape_and_email.yml
