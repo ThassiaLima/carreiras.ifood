@@ -73,8 +73,8 @@
         "title": "analista de dados junior",
         "link": "https://carreiras.ifood.com.br/en/job/7959454002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-02",
+        "status": "fechada"
     },
     {
         "title": "analista de dados pleno",
@@ -283,6 +283,13 @@
         "title": "analista de dados especialista",
         "link": "https://carreiras.ifood.com.br/en/job/8006939002/",
         "date_entrada": "2025-05-30",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de negócios senior (growth e analytics)",
+        "link": "https://carreiras.ifood.com.br/en/job/8012147002/",
+        "date_entrada": "2025-06-02",
         "date_saida": null,
         "status": "ativa"
     }
