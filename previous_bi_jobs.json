@@ -136,8 +136,8 @@
         "title": "analista de negócios pleno",
         "link": "https://carreiras.ifood.com.br/en/job/8002732002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-03",
+        "status": "fechada"
     },
     {
         "title": "analista de negócios pleno",
@@ -290,6 +290,13 @@
         "title": "analista de negócios senior (growth e analytics)",
         "link": "https://carreiras.ifood.com.br/en/job/8012147002/",
         "date_entrada": "2025-06-02",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de negócios pleno",
+        "link": "https://carreiras.ifood.com.br/en/job/8006807002/",
+        "date_entrada": "2025-06-03",
         "date_saida": null,
         "status": "ativa"
     }
