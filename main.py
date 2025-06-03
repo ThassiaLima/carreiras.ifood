@@ -18,7 +18,7 @@ from datetime import datetime # Importar datetime
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
-EMAIL_SUBJECT = "Novas Vagas de Analista de BI no iFood!"
+EMAIL_SUBJECT = "Novas Vagas no carreiras iFood!"
 
 # --- CONFIGURAÇÕES DE RASPAGEM ---
 URL = "https://carreiras.ifood.com.br/"
