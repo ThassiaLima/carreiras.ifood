@@ -143,8 +143,8 @@
         "title": "analista de negócios pleno",
         "link": "https://carreiras.ifood.com.br/en/job/8003457002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-04",
+        "status": "fechada"
     },
     {
         "title": "analista de negócios pleno",
@@ -304,6 +304,13 @@
         "title": "analista de dados pleno",
         "link": "https://carreiras.ifood.com.br/en/job/7971436002/",
         "date_entrada": "2025-06-03",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de dados especialista (vaga afirmativa para pessoa negra)",
+        "link": "https://carreiras.ifood.com.br/en/job/7987102002/",
+        "date_entrada": "2025-06-04",
         "date_saida": null,
         "status": "ativa"
     }
