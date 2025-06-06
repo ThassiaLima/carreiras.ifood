@@ -213,8 +213,8 @@
         "title": "ifood pago - analista de crm growth pleno",
         "link": "https://carreiras.ifood.com.br/en/job/7991581002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-06",
+        "status": "fechada"
     },
     {
         "title": "ifood pago - analista de negócios júnior",
@@ -325,6 +325,20 @@
         "title": "analista de negócios pleno",
         "link": "https://carreiras.ifood.com.br/en/job/7961928002/",
         "date_entrada": "2025-06-05",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de business intelligence júnior",
+        "link": "https://carreiras.ifood.com.br/en/job/7958130002/",
+        "date_entrada": "2025-06-06",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de negócios jr - data driven",
+        "link": "https://carreiras.ifood.com.br/en/job/7939578002/",
+        "date_entrada": "2025-06-06",
         "date_saida": null,
         "status": "ativa"
     }
