@@ -206,8 +206,8 @@
         "title": "gerente de crm - canais entregadores",
         "link": "https://carreiras.ifood.com.br/en/job/7944211002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-10",
+        "status": "fechada"
     },
     {
         "title": "ifood pago - analista de crm growth pleno",
@@ -339,8 +339,8 @@
         "title": "analista de negócios jr - data driven",
         "link": "https://carreiras.ifood.com.br/en/job/7939578002/",
         "date_entrada": "2025-06-06",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-10",
+        "status": "fechada"
     },
     {
         "title": "analista de business intelligence júnior",
@@ -360,6 +360,20 @@
         "title": "analista de business intelligence pleno",
         "link": "https://carreiras.ifood.com.br/en/job/8007791002/",
         "date_entrada": "2025-06-07",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de dados pleno",
+        "link": "https://carreiras.ifood.com.br/en/job/8010367002/",
+        "date_entrada": "2025-06-10",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de dados sênior - tech",
+        "link": "https://carreiras.ifood.com.br/en/job/7999862002/",
+        "date_entrada": "2025-06-10",
         "date_saida": null,
         "status": "ativa"
     }
