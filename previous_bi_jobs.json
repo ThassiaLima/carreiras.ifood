@@ -269,8 +269,8 @@
         "title": "analista de negócios sênior",
         "link": "https://carreiras.ifood.com.br/en/job/8002629002/",
         "date_entrada": "2025-05-30",
-        "date_saida": "2025-06-09",
-        "status": "fechada"
+        "date_saida": null,
+        "status": "ativa"
     },
     {
         "title": "analista de business intelligence sênior",
@@ -401,6 +401,13 @@
     {
         "title": "analista de negócios pleno",
         "link": "https://carreiras.ifood.com.br/en/job/8012258002/",
+        "date_entrada": "2025-06-11",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de business intelligence pleno",
+        "link": "https://carreiras.ifood.com.br/en/job/7854941002/",
         "date_entrada": "2025-06-11",
         "date_saida": null,
         "status": "ativa"
