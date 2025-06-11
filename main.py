@@ -165,7 +165,7 @@ def send_email(sender_email, sender_password, receiver_email, subject, body_html
     Envia um e-mail com conteúdo HTML.
     """
     msg = MIMEMultipart("alternative")
-    msg["From"] = sender_email
+    msg["From"] = f"Vagas carreira Ifood <{sender_email}>"
     msg["To"] = receiver_email
     msg["Subject"] = subject
 
