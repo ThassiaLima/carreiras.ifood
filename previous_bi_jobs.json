@@ -416,8 +416,8 @@
         "title": "analista de produto junior - privacy operations",
         "link": "https://carreiras.ifood.com.br/en/job/8022499002/",
         "date_entrada": "2025-06-12",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-18",
+        "status": "fechada"
     },
     {
         "title": "analista de negócios sênior",
@@ -492,6 +492,27 @@
     {
         "title": "analista de business intelligence pleno",
         "link": "https://carreiras.ifood.com.br/en/job/8012225002/",
+        "date_entrada": "2025-06-18",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de business intelligence júnior",
+        "link": "https://carreiras.ifood.com.br/en/job/8020203002/",
+        "date_entrada": "2025-06-18",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de negócios pleno",
+        "link": "https://carreiras.ifood.com.br/en/job/8023465002/",
+        "date_entrada": "2025-06-18",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de negócios sênior - farmácia",
+        "link": "https://carreiras.ifood.com.br/en/job/8012409002/",
         "date_entrada": "2025-06-18",
         "date_saida": null,
         "status": "ativa"
