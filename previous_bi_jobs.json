@@ -248,8 +248,8 @@
         "title": "ifood pago - analista de negócios pleno - cartões",
         "link": "https://carreiras.ifood.com.br/en/job/8007514002/",
         "date_entrada": "2025-05-29",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-06-20",
+        "status": "fechada"
     },
     {
         "title": "analista de dados especialista",
@@ -514,6 +514,13 @@
         "title": "analista de negócios sênior - farmácia",
         "link": "https://carreiras.ifood.com.br/en/job/8012409002/",
         "date_entrada": "2025-06-18",
+        "date_saida": null,
+        "status": "ativa"
+    },
+    {
+        "title": "analista de negócios pleno - farmácia",
+        "link": "https://carreiras.ifood.com.br/en/job/8027684002/",
+        "date_entrada": "2025-06-20",
         "date_saida": null,
         "status": "ativa"
     }
