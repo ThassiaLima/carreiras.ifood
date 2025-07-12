@@ -65,9 +65,10 @@ def buscar_vagas_ifood():
 
     try:
         # Input de busca
-        campo_busca = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, "input[placeholder='Buscar vagas']"))
-        )
+        campo_busca = WebDriverWait(driver, 15).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='JobSearch']"))
+        )       
+
         campo_busca.clear()
         campo_busca.send_keys("Dados")
         campo_busca.send_keys(Keys.ENTER)
