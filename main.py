@@ -114,7 +114,8 @@ def get_ifood_job_listings(url, keywords):
     
     soup = BeautifulSoup(driver.page_source, 'html.parser')
 
-    job_listings_elements = soup.select("ul.sc-ienWRC li") 
+    job_listings_elements = soup.select("li[data-testid='job-list__listitem']")
+ 
 
     print(f"Total de elementos de vaga (<li>) encontrados via BeautifulSoup: {len(job_listings_elements)}")
 
