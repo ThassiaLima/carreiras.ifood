@@ -59,6 +59,7 @@ def upload_data_to_google_sheets():
             row = [
                 job.get('title', ''),
                 job.get('link', ''),
+                job.get('location', ''),
                 job.get('date_entrada', ''),
                 job.get('date_saida', ''),
                 job.get('status', '')
