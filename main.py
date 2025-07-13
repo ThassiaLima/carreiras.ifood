@@ -19,14 +19,14 @@ SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
 EMAIL_SUBJECT = "Novas Vagas no carreiras iFood!"
-URL = "https://carreiras.ifood.com.br/jobs" # URL direta da página de vagas
-SEARCH_KEYWORDS = ["Analista de Negócios", "Analista de Business Intelligence", "Data", "CRM", "Dados", "Product", "Manager"]
+URL = "https://carreiras.ifood.com.br/jobs" # Sua URL atualizada
+SEARCH_KEYWORDS = ["Analista de Negócios", "Analista de Business Intelligence", "Data", "CRM", "Dados", "Product", "Manager"] # Sua lista de palavras-chave atualizada
 PREVIOUS_JOBS_FILE = "previous_bi_jobs.json"
 
 
 def scrape_jobs_for_term(search_term):
     """
-    CORREÇÃO FINAL: Apenas digita o termo e espera a página atualizar sozinha (live search).
+    Apenas digita o termo e espera a página atualizar sozinha (live search).
     """
     print(f"\n--- Buscando pelo termo: '{search_term}' ---")
     driver = None
@@ -46,18 +46,14 @@ def scrape_jobs_for_term(search_term):
         driver.get(URL)
         wait = WebDriverWait(driver, 20)
 
-        # 1. Encontra o campo de busca
         search_input = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "input[name='JobSearch']")))
         
-        # 2. Digita o termo. A página atualizará sozinha.
         search_input.clear()
         search_input.send_keys(search_term)
         print(f"Termo '{search_term}' digitado. Aguardando atualização da página...")
 
-        # 3. Pausa paciente para a mágica do 'live search' acontecer.
         time.sleep(6)
 
-        # 4. Extrai os resultados
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         job_elements = soup.select('a[href^="/job/"]')
         print(f"Encontrados {len(job_elements)} resultados para '{search_term}'.")
@@ -86,11 +82,58 @@ def scrape_jobs_for_term(search_term):
 
 
 def send_email(sender_email, sender_password, receiver_email, subject, body_html):
-    """Envia um e-mail com conteúdo HTML."""
+    """
+    Envia um e-mail com conteúdo HTML e logs detalhados para depuração.
+    """
+    print("\n--- INICIANDO PROCESSO DE ENVIO DE E-MAIL ---")
+
+    # 1. Verificação das credenciais
     if not all([sender_email, sender_password, receiver_email]):
-        print("\nAVISO: Credenciais de e-mail não configuradas. Pulando envio de e-mail.")
+        print(">>> AVISO: Uma ou mais credenciais de e-mail (SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL) não foram encontradas.")
+        print(">>> Verifique se os 'GitHub Secrets' foram configurados corretamente no repositório.")
+        print(">>> Pulando envio de e-mail.")
+        print("--- PROCESSO DE ENVIO DE E-MAIL FINALIZADO (COM AVISO) ---")
         return
-    # (O resto da função de email permanece o mesmo)
+
+    print(">>> SUCESSO: Credenciais de e-mail encontradas. Prosseguindo com o envio.")
+
+    # 2. Montagem da mensagem
+    msg = MIMEMultipart("alternative")
+    msg["From"] = f"Vagas carreira iFood <{sender_email}>"
+    msg["To"] = receiver_email
+    msg["Subject"] = subject
+    msg.attach(MIMEText(body_html, "html"))
+    print(">>> Mensagem de e-mail montada.")
+
+    server = None
+    try:
+        # 3. Conexão com o servidor
+        print(">>> Conectando ao servidor SMTP do Gmail (smtp.gmail.com:465)...")
+        server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+        print(">>> Conexão com o servidor SMTP estabelecida.")
+
+        # 4. Login na conta
+        print(f">>> Realizando login com o e-mail: {sender_email}...")
+        server.login(sender_email, sender_password)
+        print(">>> Login realizado com sucesso.")
+
+        # 5. Envio do e-mail
+        print(f">>> Enviando a mensagem para: {receiver_email}...")
+        server.sendmail(sender_email, receiver_email, msg.as_string())
+        print(f"✅ SUCESSO! E-mail enviado para {receiver_email}!")
+
+    except Exception as e:
+        # 6. Tratamento de erro detalhado
+        print(f"❌ FALHA AO ENVIAR E-MAIL. Erro do tipo: {e.__class__.__name__}")
+        print(f"   Detalhe do erro: {e}")
+        print("   CAUSAS COMUNS: A 'Senha de App' está incorreta ou a Verificação em Duas Etapas não está ativa na conta Google.")
+    
+    finally:
+        # 7. Finalização da conexão
+        if server:
+            server.quit()
+            print(">>> Conexão com o servidor SMTP fechada.")
+        print("--- PROCESSO DE ENVIO DE E-MAIL FINALIZADO ---")
 
 
 def load_jobs_history(file_path):
@@ -122,7 +165,6 @@ if __name__ == "__main__":
         for job in jobs_from_term:
             all_found_jobs[job['link']] = job
 
-    # Filtra a lista total para manter apenas as vagas relevantes
     print("\n--- Filtrando resultados totais pelas palavras-chave ---")
     relevant_jobs = {}
     for link, job_data in all_found_jobs.items():
@@ -137,7 +179,6 @@ if __name__ == "__main__":
     open_relevant_job_links = set(relevant_jobs.keys())
     new_jobs_for_notification = []
     
-    # Atualiza o status das vagas no histórico
     print("\nAnalisando mudanças no histórico de vagas...")
     for job_in_history in jobs_history:
         is_still_open = job_in_history['link'] in open_relevant_job_links
@@ -150,7 +191,6 @@ if __name__ == "__main__":
             job_in_history['date_saida'] = None
             print(f"- Vaga REABERTA: {job_in_history['title']}")
 
-    # Adiciona vagas que nunca foram vistas antes
     existing_links_in_history = {job['link'] for job in jobs_history}
     for link, job_data in relevant_jobs.items():
         if link not in existing_links_in_history:
@@ -163,22 +203,4 @@ if __name__ == "__main__":
                 "date_saida": None
             }
             jobs_history.append(new_job_entry)
-            new_jobs_for_notification.append(new_job_entry)
-            print(f"- Vaga NOVA: {new_job_entry['title']}")
-
-    save_jobs_history(PREVIOUS_JOBS_FILE, jobs_history)
-
-    if new_jobs_for_notification:
-        # Lógica de e-mail (não mostrada para brevidade)
-        print(f"\n--- {len(new_jobs_for_notification)} novas vagas para notificar. ---")
-    else:
-        print("\nNenhuma vaga nova para notificar.")
-
-    # --- RELATÓRIO FINAL ---
-    print("\n" + "="*40)
-    print("      RESUMO DA EXECUÇÃO")
-    print("="*40)
-    print(f"- Total de vagas encontradas (relevantes e únicas): {len(relevant_jobs)}")
-    print(f"- Total de vagas novas (para notificação): {len(new_jobs_for_notification)}")
-    print(f"- Total de vagas salvas no histórico (JSON): {len(jobs_history)}")
-    print("="*40)
+            new_jobs_for_notification.append(new_job_entry
