@@ -203,4 +203,27 @@ if __name__ == "__main__":
                 "date_saida": None
             }
             jobs_history.append(new_job_entry)
-            new_jobs_for_notification.append(new_job_entry
+            new_jobs_for_notification.append(new_job_entry)
+            print(f"- Vaga NOVA: {new_job_entry['title']}")
+
+    save_jobs_history(PREVIOUS_JOBS_FILE, jobs_history)
+
+    if new_jobs_for_notification:
+        # A lógica do e-mail é chamada aqui
+        email_body_html = "<html><body><h2>🍟 Novas vagas no portal de carreira iFood! 🍟</h2><ul>"
+        for job in new_jobs_for_notification:
+            location = job.get('location', 'N/A')
+            email_body_html += f"<li><b>{job['title']}</b> ({location}): <a href='{job['link']}'>{job['link']}</a></li>"
+        email_body_html += "</ul></body></html>"
+        send_email(SENDER_EMAIL, SENDER_PASSWORD, RECEIVER_EMAIL, EMAIL_SUBJECT, email_body_html)
+    else:
+        print("\nNenhuma vaga nova para notificar.")
+
+    # --- RELATÓRIO FINAL ---
+    print("\n" + "="*40)
+    print("      RESUMO DA EXECUÇÃO")
+    print("="*40)
+    print(f"- Total de vagas encontradas (relevantes e únicas): {len(relevant_jobs)}")
+    print(f"- Total de vagas novas (para notificação): {len(new_jobs_for_notification)}")
+    print(f"- Total de vagas salvas no histórico (JSON): {len(jobs_history)}")
+    print("="*40)
