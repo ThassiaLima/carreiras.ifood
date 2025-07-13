@@ -52,7 +52,7 @@ def upload_data_to_google_sheets():
 
         # Prepare os dados para o Google Sheets
         # Garante que a ordem das colunas seja consistente
-        header = ['title', 'location', 'link', 'date_entrada', 'date_saida', 'status']
+        header = ['title', 'link', 'location', 'date_entrada', 'date_saida', 'status']
         data_to_upload = [header] # Primeira linha é o cabeçalho
 
         for job in all_jobs_history:
