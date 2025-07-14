@@ -1,1186 +1,922 @@
 [
-    {
-        "title": "Analista de Negócios Pleno",
-        "link": "https://carreiras.ifood.com.br/job/7926406002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno",
-        "link": "https://carreiras.ifood.com.br/job/8057150002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno - Farmácia",
-        "link": "https://carreiras.ifood.com.br/job/8012418002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno - Logística Restaurantes",
-        "link": "https://carreiras.ifood.com.br/job/8003417002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8002629002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8041372002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8025061002/",
-        "location": "Osasco,São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/7985660002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8035486002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "2025-07-14",
-        "status": "fechada"
-    },
-    {
-        "title": "Analista de Negócios Sênior - Farmácia",
-        "link": "https://carreiras.ifood.com.br/job/8012409002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Senior (Growth e Analytics)",
-        "link": "https://carreiras.ifood.com.br/job/8012147002/",
-        "location": "Osasco,São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior - Operação Logística",
-        "link": "https://carreiras.ifood.com.br/job/8047372002/",
-        "location": "Osasco,São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "iFood Pago - Analista de Negócios Sênior - Planejamento Comercial",
-        "link": "https://carreiras.ifood.com.br/job/8066012002/",
-        "location": "Osasco, São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Business Intelligence Pleno",
-        "link": "https://carreiras.ifood.com.br/job/7854941002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Business Intelligence Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8019922002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "2025-07-14",
-        "status": "fechada"
-    },
-    {
-        "title": "Analista de Business Intelligence Sênior",
-        "link": "https://carreiras.ifood.com.br/job/7915526002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Sênior  - Vaga Afirmativa para Mulheres",
-        "link": "https://carreiras.ifood.com.br/job/7959496002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de  Dados Especialista",
-        "link": "https://carreiras.ifood.com.br/job/7985585002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Especialista",
-        "link": "https://carreiras.ifood.com.br/job/7977514002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Sênior",
-        "link": "https://carreiras.ifood.com.br/job/7978509002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Sênior (Afirmativa para mulheres)",
-        "link": "https://carreiras.ifood.com.br/job/7978511002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Sênior (Vaga afirmativa para mulheres)",
-        "link": "https://carreiras.ifood.com.br/job/8038730002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Sênior (Vaga afirmativa para mulheres)",
-        "link": "https://carreiras.ifood.com.br/job/8011171002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Data Analyst Lead - Marketplace",
-        "link": "https://carreiras.ifood.com.br/job/7962713002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Data Product Manager",
-        "link": "https://carreiras.ifood.com.br/job/8016305002/",
-        "location": "Osasco,São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Data Scientist Specialist",
-        "link": "https://carreiras.ifood.com.br/job/7999741002/",
-        "location": "Osasco",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Engenheira de Dados Especialista (Afirmativa para mulheres)",
-        "link": "https://carreiras.ifood.com.br/job/7993898002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Senior Software Engineer - SRE Data",
-        "link": "https://carreiras.ifood.com.br/job/7868473002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "SOFTWARE ENGINEER - DBA/DBRE/SRE - DATA STORE",
-        "link": "https://carreiras.ifood.com.br/job/8054858002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Specialista Data Scientist - Pesquisa Operacional",
-        "link": "https://carreiras.ifood.com.br/job/8014437002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "ANL SR CRM - PERFORMANCE E SEO | BU MKTP",
-        "link": "https://carreiras.ifood.com.br/job/8064159002/",
-        "location": "Osasco,São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Especialista",
-        "link": "https://carreiras.ifood.com.br/job/7968772002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Pleno",
-        "link": "https://carreiras.ifood.com.br/job/7959498002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Senior",
-        "link": "https://carreiras.ifood.com.br/job/7959500002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8012122002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados",
-        "link": "https://carreiras.ifood.com.br/job/4990482002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Especialista",
-        "link": "https://carreiras.ifood.com.br/job/7933679002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Cientista de Dados Sênior",
-        "link": "https://carreiras.ifood.com.br/job/7943893002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Group Product Manager (Vaga afirmativa para mulheres)",
-        "link": "https://carreiras.ifood.com.br/job/7942552002/",
-        "location": "Hibrido",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager Especialista - Product Growth",
-        "link": "https://carreiras.ifood.com.br/job/7972475002/",
-        "location": "Osasco",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager III - Logistics Intelligence",
-        "link": "https://carreiras.ifood.com.br/job/7956524002/",
-        "location": "Osasco,São Paulo, Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager IV (Ferramenta de Busca)",
-        "link": "https://carreiras.ifood.com.br/job/7866036002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8024764002/",
-        "location": "Remoto",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager Sênior (ifood Beneficios / Cartões)",
-        "link": "https://carreiras.ifood.com.br/job/8022511002/",
-        "location": "Hibrido",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager De Growth Sênior (iFood Benefícios)",
-        "link": "https://carreiras.ifood.com.br/job/8030960002/",
-        "location": "Hibrido",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Product Manager  IA + Low Code Sênior (iFood Benefícios)",
-        "link": "https://carreiras.ifood.com.br/job/8030962002/",
-        "location": "Hibrido",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Software Engineering Manager I (Vaga afirmativa para Mulheres)",
-        "link": "https://carreiras.ifood.com.br/job/7337052002/",
-        "location": "Brasil",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/7972008002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-12",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7837417002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-10",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7997626002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7915526002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7994764002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-03",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7956474002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7984384002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-05-29",
-        "status": ""
-    },
-    {
-        "title": "analista de dados especialista",
-        "link": "https://carreiras.ifood.com.br/en/job/7968768002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados especialista",
-        "link": "https://carreiras.ifood.com.br/en/job/7968772002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados especialista",
-        "link": "https://carreiras.ifood.com.br/en/job/7952032002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-03",
-        "status": ""
-    },
-    {
-        "title": "analista de dados junior",
-        "link": "https://carreiras.ifood.com.br/en/job/7959454002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-02",
-        "status": ""
-    },
-    {
-        "title": "analista de dados pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7906542002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-14",
-        "status": ""
-    },
-    {
-        "title": "analista de dados senior",
-        "link": "https://carreiras.ifood.com.br/en/job/7959500002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados senior",
-        "link": "https://carreiras.ifood.com.br/en/job/7970188002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "analista de dados sênior  - vaga afirmativa para mulheres",
-        "link": "https://carreiras.ifood.com.br/en/job/7959496002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/7983516002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-05-30",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/7985734002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-05-29",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios júnior - integração",
-        "link": "https://carreiras.ifood.com.br/en/job/7993450002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-04",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8001632002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-04",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8002732002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-03",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8003457002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-19",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7771103002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-05-29",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8000284002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-05-30",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno - performance e operações",
-        "link": "https://carreiras.ifood.com.br/en/job/7988589002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-03",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7979027002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7998712002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7985660002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior - performance e operações",
-        "link": "https://carreiras.ifood.com.br/en/job/7841621002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "anl jr growth - novos produtos anota aí | bu mktp",
-        "link": "https://carreiras.ifood.com.br/en/job/7974234002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-05",
-        "status": ""
-    },
-    {
-        "title": "gerente de crm - canais entregadores",
-        "link": "https://carreiras.ifood.com.br/en/job/7944211002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-10",
-        "status": ""
-    },
-    {
-        "title": "ifood pago - analista de crm growth pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7991581002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-06",
-        "status": ""
-    },
-    {
-        "title": "ifood pago - analista de negócios júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/7976082002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-03",
-        "status": ""
-    },
-    {
-        "title": "product manager sênior (produtos tributários)",
-        "link": "https://carreiras.ifood.com.br/en/job/7944871002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-14",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/8005776002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "designer de produto sênior (vaga afirmativa para mulheres e pessoas negras)",
-        "link": "https://carreiras.ifood.com.br/en/job/7944525002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-16",
-        "status": ""
-    },
-    {
-        "title": "ifood pago - analista de negócios pleno - cartões",
-        "link": "https://carreiras.ifood.com.br/en/job/8007514002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-29",
-        "date_saida": "2025-06-20",
-        "status": ""
-    },
-    {
-        "title": "analista de dados especialista",
-        "link": "https://carreiras.ifood.com.br/en/job/7959503002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-30",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7959452002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-30",
-        "date_saida": "2025-06-03",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8002629002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-30",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8012185002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-30",
-        "date_saida": "2025-06-09",
-        "status": ""
-    },
-    {
-        "title": "analista de dados especialista",
-        "link": "https://carreiras.ifood.com.br/en/job/8006939002/",
-        "location": "N/A",
-        "date_entrada": "2025-05-30",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios senior (growth e analytics)",
-        "link": "https://carreiras.ifood.com.br/en/job/8012147002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-02",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8006807002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-03",
-        "date_saida": "2025-06-16",
-        "status": ""
-    },
-    {
-        "title": "analista de dados pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7971436002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-03",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados especialista (vaga afirmativa para pessoa negra)",
-        "link": "https://carreiras.ifood.com.br/en/job/7987102002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-04",
-        "date_saida": "2025-06-18",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8001006002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-05",
-        "date_saida": "2025-06-15",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7961928002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-05",
-        "date_saida": "2025-06-09",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/7958130002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-06",
-        "date_saida": "2025-06-11",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios jr - data driven",
-        "link": "https://carreiras.ifood.com.br/en/job/7939578002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-06",
-        "date_saida": "2025-06-10",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/8012341002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-06",
-        "date_saida": "2025-06-12",
-        "status": ""
-    },
-    {
-        "title": "analista de dados sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8008299002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-06",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8007791002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-07",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8010367002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-10",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados sênior - tech",
-        "link": "https://carreiras.ifood.com.br/en/job/7999862002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-10",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7926406002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-10",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8004037002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-10",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior (growth)",
-        "link": "https://carreiras.ifood.com.br/en/job/7995167002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-10",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8012258002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-11",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7854941002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-11",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de produto junior - privacy operations",
-        "link": "https://carreiras.ifood.com.br/en/job/8022499002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-12",
-        "date_saida": "2025-06-18",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8030355002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-12",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/7997804002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-13",
-        "date_saida": "2025-06-20",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8022211002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-13",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/7958582002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-16",
-        "date_saida": "2025-06-23",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8022397002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-16",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8030592002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-17",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de dados",
-        "link": "https://carreiras.ifood.com.br/en/job/7948583002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-17",
-        "date_saida": "2025-06-21",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/7920561002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-17",
-        "date_saida": "2025-06-19",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8002107002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-18",
-        "date_saida": "2025-06-23",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8031489002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-18",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8012225002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-18",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/8020203002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-18",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno",
-        "link": "https://carreiras.ifood.com.br/en/job/8023465002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-18",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior - farmácia",
-        "link": "https://carreiras.ifood.com.br/en/job/8012409002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-18",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno - farmácia",
-        "link": "https://carreiras.ifood.com.br/en/job/8027684002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-20",
-        "date_saida": "2025-06-21",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno - farmácia",
-        "link": "https://carreiras.ifood.com.br/en/job/8012418002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-23",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios pleno - logística restaurantes",
-        "link": "https://carreiras.ifood.com.br/en/job/8003417002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-23",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de crm júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/8032967002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-23",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de negócios sênior",
-        "link": "https://carreiras.ifood.com.br/en/job/8038453002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-23",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "analista de business intelligence júnior",
-        "link": "https://carreiras.ifood.com.br/en/job/8034155002/",
-        "location": "N/A",
-        "date_entrada": "2025-06-24",
-        "date_saida": "2025-06-25",
-        "status": ""
-    },
-    {
-        "title": "Analista de Business Intelligence Pleno",
-        "link": "https://carreiras.ifood.com.br/job/7854941002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Business Intelligence Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8019922002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "2025-07-14",
-        "status": "fechada"
-    },
-    {
-        "title": "Analista de Business Intelligence Sênior",
-        "link": "https://carreiras.ifood.com.br/job/7915526002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Especialista",
-        "link": "https://carreiras.ifood.com.br/job/7968772002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Pleno",
-        "link": "https://carreiras.ifood.com.br/job/7959498002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Senior",
-        "link": "https://carreiras.ifood.com.br/job/7959500002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8012122002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Dados Sênior  - Vaga Afirmativa para Mulheres",
-        "link": "https://carreiras.ifood.com.br/job/7959496002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno",
-        "link": "https://carreiras.ifood.com.br/job/7926406002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno",
-        "link": "https://carreiras.ifood.com.br/job/8057150002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno - Farmácia",
-        "link": "https://carreiras.ifood.com.br/job/8012418002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Pleno - Logística Restaurantes",
-        "link": "https://carreiras.ifood.com.br/job/8003417002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Senior (Growth e Analytics)",
-        "link": "https://carreiras.ifood.com.br/job/8012147002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8002629002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8041372002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8025061002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/7985660002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior",
-        "link": "https://carreiras.ifood.com.br/job/8035486002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "2025-07-14",
-        "status": "fechada"
-    },
-    {
-        "title": "Analista de Negócios Sênior - Farmácia",
-        "link": "https://carreiras.ifood.com.br/job/8012409002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "Analista de Negócios Sênior - Operação Logística",
-        "link": "https://carreiras.ifood.com.br/job/8047372002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    },
-    {
-        "title": "ANL SR CRM - PERFORMANCE E SEO | BU MKTP",
-        "link": "https://carreiras.ifood.com.br/job/8064159002/",
-        "location": "N/A",
-        "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
-    }
+ {
+   "title": "Analista de Negócios Pleno",
+   "link": "https://carreiras.ifood.com.br/job/7926406002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Pleno",
+   "link": "https://carreiras.ifood.com.br/job/8057150002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Pleno - Farmácia",
+   "link": "https://carreiras.ifood.com.br/job/8012418002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Pleno - Logística Restaurantes",
+   "link": "https://carreiras.ifood.com.br/job/8003417002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8002629002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8041372002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8025061002/",
+   "location": "Osasco,São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Sênior",
+   "link": "https://carreiras.ifood.com.br/job/7985660002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8035486002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "2025-07-14",
+   "status": "fechada"
+ },
+ {
+   "title": "Analista de Negócios Sênior - Farmácia",
+   "link": "https://carreiras.ifood.com.br/job/8012409002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Senior (Growth e Analytics)",
+   "link": "https://carreiras.ifood.com.br/job/8012147002/",
+   "location": "Osasco,São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Negócios Sênior - Operação Logística",
+   "link": "https://carreiras.ifood.com.br/job/8047372002/",
+   "location": "Osasco,São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "iFood Pago - Analista de Negócios Sênior - Planejamento Comercial",
+   "link": "https://carreiras.ifood.com.br/job/8066012002/",
+   "location": "Osasco, São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Business Intelligence Pleno",
+   "link": "https://carreiras.ifood.com.br/job/7854941002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Business Intelligence Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8019922002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "2025-07-14",
+   "status": "fechada"
+ },
+ {
+   "title": "Analista de Business Intelligence Sênior",
+   "link": "https://carreiras.ifood.com.br/job/7915526002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Dados Sênior  - Vaga Afirmativa para Mulheres",
+   "link": "https://carreiras.ifood.com.br/job/7959496002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de  Dados Especialista",
+   "link": "https://carreiras.ifood.com.br/job/7985585002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Especialista",
+   "link": "https://carreiras.ifood.com.br/job/7977514002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Sênior",
+   "link": "https://carreiras.ifood.com.br/job/7978509002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Sênior (Afirmativa para mulheres)",
+   "link": "https://carreiras.ifood.com.br/job/7978511002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Sênior (Vaga afirmativa para mulheres)",
+   "link": "https://carreiras.ifood.com.br/job/8038730002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Sênior (Vaga afirmativa para mulheres)",
+   "link": "https://carreiras.ifood.com.br/job/8011171002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Data Analyst Lead - Marketplace",
+   "link": "https://carreiras.ifood.com.br/job/7962713002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Data Product Manager",
+   "link": "https://carreiras.ifood.com.br/job/8016305002/",
+   "location": "Osasco,São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Data Scientist Specialist",
+   "link": "https://carreiras.ifood.com.br/job/7999741002/",
+   "location": "Osasco",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Engenheira de Dados Especialista (Afirmativa para mulheres)",
+   "link": "https://carreiras.ifood.com.br/job/7993898002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Senior Software Engineer - SRE Data",
+   "link": "https://carreiras.ifood.com.br/job/7868473002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "SOFTWARE ENGINEER - DBA/DBRE/SRE - DATA STORE",
+   "link": "https://carreiras.ifood.com.br/job/8054858002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Specialista Data Scientist - Pesquisa Operacional",
+   "link": "https://carreiras.ifood.com.br/job/8014437002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "ANL SR CRM - PERFORMANCE E SEO | BU MKTP",
+   "link": "https://carreiras.ifood.com.br/job/8064159002/",
+   "location": "Osasco,São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Dados Especialista",
+   "link": "https://carreiras.ifood.com.br/job/7968772002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Dados Pleno",
+   "link": "https://carreiras.ifood.com.br/job/7959498002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Dados Senior",
+   "link": "https://carreiras.ifood.com.br/job/7959500002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Analista de Dados Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8012122002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados",
+   "link": "https://carreiras.ifood.com.br/job/4990482002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Especialista",
+   "link": "https://carreiras.ifood.com.br/job/7933679002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Cientista de Dados Sênior",
+   "link": "https://carreiras.ifood.com.br/job/7943893002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Group Product Manager (Vaga afirmativa para mulheres)",
+   "link": "https://carreiras.ifood.com.br/job/7942552002/",
+   "location": "Hibrido",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager Especialista - Product Growth",
+   "link": "https://carreiras.ifood.com.br/job/7972475002/",
+   "location": "Osasco",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager III - Logistics Intelligence",
+   "link": "https://carreiras.ifood.com.br/job/7956524002/",
+   "location": "Osasco,São Paulo, Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager IV (Ferramenta de Busca)",
+   "link": "https://carreiras.ifood.com.br/job/7866036002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager Sênior",
+   "link": "https://carreiras.ifood.com.br/job/8024764002/",
+   "location": "Remoto",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager Sênior (ifood Beneficios / Cartões)",
+   "link": "https://carreiras.ifood.com.br/job/8022511002/",
+   "location": "Hibrido",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager De Growth Sênior (iFood Benefícios)",
+   "link": "https://carreiras.ifood.com.br/job/8030960002/",
+   "location": "Hibrido",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Product Manager  IA + Low Code Sênior (iFood Benefícios)",
+   "link": "https://carreiras.ifood.com.br/job/8030962002/",
+   "location": "Hibrido",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "Software Engineering Manager I (Vaga afirmativa para Mulheres)",
+   "link": "https://carreiras.ifood.com.br/job/7337052002/",
+   "location": "Brasil",
+   "date_entrada": "2025-07-13",
+   "date_saida": "",
+   "status": "ativa"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/7972008002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-12",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7837417002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-10",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7997626002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/7994764002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-03",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/7956474002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/7984384002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-05-29",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados especialista",
+   "link": "https://carreiras.ifood.com.br/en/job/7968768002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados especialista",
+   "link": "https://carreiras.ifood.com.br/en/job/7952032002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-03",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados junior",
+   "link": "https://carreiras.ifood.com.br/en/job/7959454002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-02",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7906542002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-14",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados senior",
+   "link": "https://carreiras.ifood.com.br/en/job/7970188002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/7983516002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-05-30",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/7985734002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-05-29",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios júnior - integração",
+   "link": "https://carreiras.ifood.com.br/en/job/7993450002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-04",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8001632002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-04",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8002732002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-03",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8003457002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-19",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7771103002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-05-29",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8000284002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-05-30",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno - performance e operações",
+   "link": "https://carreiras.ifood.com.br/en/job/7988589002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-03",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/7979027002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/7998712002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios sênior - performance e operações",
+   "link": "https://carreiras.ifood.com.br/en/job/7841621002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "anl jr growth - novos produtos anota aí | bu mktp",
+   "link": "https://carreiras.ifood.com.br/en/job/7974234002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-05",
+   "status": "fechada"
+ },
+ {
+   "title": "gerente de crm - canais entregadores",
+   "link": "https://carreiras.ifood.com.br/en/job/7944211002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-10",
+   "status": "fechada"
+ },
+ {
+   "title": "ifood pago - analista de crm growth pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7991581002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-06",
+   "status": "fechada"
+ },
+ {
+   "title": "ifood pago - analista de negócios júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/7976082002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-03",
+   "status": "fechada"
+ },
+ {
+   "title": "product manager sênior (produtos tributários)",
+   "link": "https://carreiras.ifood.com.br/en/job/7944871002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-14",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/8005776002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "designer de produto sênior (vaga afirmativa para mulheres e pessoas negras)",
+   "link": "https://carreiras.ifood.com.br/en/job/7944525002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-16",
+   "status": "fechada"
+ },
+ {
+   "title": "ifood pago - analista de negócios pleno - cartões",
+   "link": "https://carreiras.ifood.com.br/en/job/8007514002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-29",
+   "date_saida": "2025-06-20",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados especialista",
+   "link": "https://carreiras.ifood.com.br/en/job/7959503002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-30",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7959452002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-30",
+   "date_saida": "2025-06-03",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8012185002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-30",
+   "date_saida": "2025-06-09",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados especialista",
+   "link": "https://carreiras.ifood.com.br/en/job/8006939002/",
+   "location": "N/A",
+   "date_entrada": "2025-05-30",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8006807002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-03",
+   "date_saida": "2025-06-16",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7971436002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-03",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados especialista (vaga afirmativa para pessoa negra)",
+   "link": "https://carreiras.ifood.com.br/en/job/7987102002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-04",
+   "date_saida": "2025-06-18",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8001006002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-05",
+   "date_saida": "2025-06-15",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7961928002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-05",
+   "date_saida": "2025-06-09",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/7958130002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-06",
+   "date_saida": "2025-06-11",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios jr - data driven",
+   "link": "https://carreiras.ifood.com.br/en/job/7939578002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-06",
+   "date_saida": "2025-06-10",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/8012341002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-06",
+   "date_saida": "2025-06-12",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8008299002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-06",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8007791002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-07",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8010367002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-10",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados sênior - tech",
+   "link": "https://carreiras.ifood.com.br/en/job/7999862002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-10",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8004037002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-10",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios sênior (growth)",
+   "link": "https://carreiras.ifood.com.br/en/job/7995167002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-10",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8012258002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-11",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de produto junior - privacy operations",
+   "link": "https://carreiras.ifood.com.br/en/job/8022499002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-12",
+   "date_saida": "2025-06-18",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8030355002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-12",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/7997804002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-13",
+   "date_saida": "2025-06-20",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8022211002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-13",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/7958582002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-16",
+   "date_saida": "2025-06-23",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8022397002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-16",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8030592002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-17",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de dados",
+   "link": "https://carreiras.ifood.com.br/en/job/7948583002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-17",
+   "date_saida": "2025-06-21",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/7920561002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-17",
+   "date_saida": "2025-06-19",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8002107002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-18",
+   "date_saida": "2025-06-23",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8031489002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-18",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8012225002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-18",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/8020203002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-18",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno",
+   "link": "https://carreiras.ifood.com.br/en/job/8023465002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-18",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios pleno - farmácia",
+   "link": "https://carreiras.ifood.com.br/en/job/8027684002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-20",
+   "date_saida": "2025-06-21",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de crm júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/8032967002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-23",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de negócios sênior",
+   "link": "https://carreiras.ifood.com.br/en/job/8038453002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-23",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ },
+ {
+   "title": "analista de business intelligence júnior",
+   "link": "https://carreiras.ifood.com.br/en/job/8034155002/",
+   "location": "N/A",
+   "date_entrada": "2025-06-24",
+   "date_saida": "2025-06-25",
+   "status": "fechada"
+ }
 ]
