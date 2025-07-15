@@ -220,8 +220,8 @@
         "link": "https://carreiras.ifood.com.br/job/7868473002/",
         "location": "Brasil",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-15",
+        "status": "fechada"
     },
     {
         "title": "SOFTWARE ENGINEER - DBA/DBRE/SRE - DATA STORE",
@@ -918,5 +918,13 @@
         "date_entrada": "2025-06-24",
         "date_saida": "2025-06-25",
         "status": "fechada"
+    },
+    {
+        "title": "Analista de Dados Pleno",
+        "link": "https://carreiras.ifood.com.br/job/8060351002/",
+        "location": "Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-15",
+        "date_saida": null
     }
 ]
