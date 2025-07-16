@@ -332,8 +332,8 @@
         "link": "https://carreiras.ifood.com.br/job/7866036002/",
         "location": "Remoto",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-16",
+        "status": "fechada"
     },
     {
         "title": "Product Manager Sênior",
@@ -933,6 +933,14 @@
         "location": "Brasil",
         "status": "ativa",
         "date_entrada": "2025-07-15",
+        "date_saida": null
+    },
+    {
+        "title": "Coordenador de Análise de Dados",
+        "link": "https://carreiras.ifood.com.br/job/8051034002/",
+        "location": "Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-16",
         "date_saida": null
     }
 ]
