@@ -60,8 +60,8 @@
         "link": "https://carreiras.ifood.com.br/job/7985660002/",
         "location": "Remoto",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-18",
+        "status": "fechada"
     },
     {
         "title": "Analista de Negócios Sênior",
@@ -970,6 +970,14 @@
     {
         "title": "Analista de Negócios Júnior",
         "link": "https://carreiras.ifood.com.br/job/8064140002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-07-18",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Sênior",
+        "link": "https://carreiras.ifood.com.br/job/8058113002/",
         "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-07-18",
