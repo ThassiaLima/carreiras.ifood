@@ -92,8 +92,8 @@
         "link": "https://carreiras.ifood.com.br/job/8047372002/",
         "location": "Osasco,São Paulo, Brasil",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-18",
+        "status": "fechada"
     },
     {
         "title": "iFood Pago - Analista de Negócios Sênior - Planejamento Comercial",
@@ -268,8 +268,8 @@
         "link": "https://carreiras.ifood.com.br/job/7959500002/",
         "location": "Remoto",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-18",
+        "status": "fechada"
     },
     {
         "title": "Analista de Dados Sênior",
@@ -957,6 +957,14 @@
         "location": "Brasil",
         "status": "ativa",
         "date_entrada": "2025-07-17",
+        "date_saida": null
+    },
+    {
+        "title": "Engenheiro(a)  de Dados Pleno - People Analytics",
+        "link": "https://carreiras.ifood.com.br/job/8065078002/",
+        "location": "Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-18",
         "date_saida": null
     }
 ]
