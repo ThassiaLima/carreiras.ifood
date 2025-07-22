@@ -260,8 +260,8 @@
         "link": "https://carreiras.ifood.com.br/job/7959498002/",
         "location": "Remoto",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-22",
+        "status": "fechada"
     },
     {
         "title": "Analista de Dados Senior",
@@ -989,6 +989,22 @@
         "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-07-21",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Pleno",
+        "link": "https://carreiras.ifood.com.br/job/8077994002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-07-22",
+        "date_saida": null
+    },
+    {
+        "title": "Data Manager - iFood Pago",
+        "link": "https://carreiras.ifood.com.br/job/8071581002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-07-22",
         "date_saida": null
     }
 ]
