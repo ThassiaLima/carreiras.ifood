@@ -20,8 +20,8 @@
         "link": "https://carreiras.ifood.com.br/job/8012418002/",
         "location": "Remoto",
         "date_entrada": "2025-07-13",
-        "date_saida": null,
-        "status": "ativa"
+        "date_saida": "2025-07-24",
+        "status": "fechada"
     },
     {
         "title": "Analista de Negócios Pleno - Logística Restaurantes",
@@ -1005,6 +1005,14 @@
         "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-07-22",
+        "date_saida": null
+    },
+    {
+        "title": "iFood Pago - Analista de Growth Data e CRM Pleno - Benefícios",
+        "link": "https://carreiras.ifood.com.br/job/8080327002/",
+        "location": "São Paulo, Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-24",
         "date_saida": null
     }
 ]
