@@ -924,16 +924,16 @@
         "link": "https://carreiras.ifood.com.br/job/8060351002/",
         "location": "Brasil",
         "date_entrada": "2025-07-15",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-25",
+        "status": "fechada"
     },
     {
         "title": "Analista de Dados",
         "link": "https://carreiras.ifood.com.br/job/7948583002/",
         "location": "Brasil",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-07-15",
-        "date_saida": null
+        "date_saida": "2025-07-25"
     },
     {
         "title": "Coordenador de Análise de Dados",
@@ -1018,6 +1018,14 @@
     {
         "title": "Senior Technical Account Manager",
         "link": "https://carreiras.ifood.com.br/job/8041415002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-07-25",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Business Intelligence Pleno",
+        "link": "https://carreiras.ifood.com.br/job/8014258002/",
         "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-07-25",
