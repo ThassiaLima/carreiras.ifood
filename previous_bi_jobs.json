@@ -12,8 +12,8 @@
         "link": "https://carreiras.ifood.com.br/job/8057150002/",
         "location": "Remoto",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-29",
+        "status": "fechada"
     },
     {
         "title": "Analista de Negócios Pleno - Farmácia",
@@ -52,8 +52,8 @@
         "link": "https://carreiras.ifood.com.br/job/8025061002/",
         "location": "Osasco,São Paulo, Brasil",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-29",
+        "status": "fechada"
     },
     {
         "title": "Analista de Negócios Sênior",
@@ -979,9 +979,9 @@
         "title": "Analista de Negócios Sênior",
         "link": "https://carreiras.ifood.com.br/job/8058113002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-07-18",
-        "date_saida": null
+        "date_saida": "2025-07-29"
     },
     {
         "title": "Cientista de Dados Especialista | Inteligência Logística",
@@ -995,9 +995,9 @@
         "title": "Analista de Negócios Pleno",
         "link": "https://carreiras.ifood.com.br/job/8077994002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-07-22",
-        "date_saida": null
+        "date_saida": "2025-07-29"
     },
     {
         "title": "Data Manager - iFood Pago",
@@ -1035,14 +1035,22 @@
         "title": "Analista de negócios Senior",
         "link": "https://carreiras.ifood.com.br/job/8089669002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-07-29",
-        "date_saida": null
+        "date_saida": "2025-07-29"
     },
     {
         "title": "Cientista de Dados Especialista (GenAI/LLMs)",
         "link": "https://carreiras.ifood.com.br/job/8095767002/",
         "location": "Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-29",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Dados Pleno | Vaga afirmativa para mulheres",
+        "link": "https://carreiras.ifood.com.br/job/8053279002/",
+        "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-07-29",
         "date_saida": null
