@@ -284,8 +284,8 @@
         "link": "https://carreiras.ifood.com.br/job/4990482002/",
         "location": "Brasil",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-30",
+        "status": "fechada"
     },
     {
         "title": "Cientista de Dados Especialista",
@@ -348,24 +348,24 @@
         "link": "https://carreiras.ifood.com.br/job/8022511002/",
         "location": "Hibrido",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-30",
+        "status": "fechada"
     },
     {
         "title": "Product Manager De Growth Sênior (iFood Benefícios)",
         "link": "https://carreiras.ifood.com.br/job/8030960002/",
         "location": "Hibrido",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-30",
+        "status": "fechada"
     },
     {
         "title": "Product Manager  IA + Low Code Sênior (iFood Benefícios)",
         "link": "https://carreiras.ifood.com.br/job/8030962002/",
         "location": "Hibrido",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-07-30",
+        "status": "fechada"
     },
     {
         "title": "Software Engineering Manager I (Vaga afirmativa para Mulheres)",
@@ -939,9 +939,9 @@
         "title": "Coordenador de Análise de Dados",
         "link": "https://carreiras.ifood.com.br/job/8051034002/",
         "location": "Brasil",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-07-16",
-        "date_saida": null
+        "date_saida": "2025-07-30"
     },
     {
         "title": "Gerente de Data e AI",
@@ -1059,6 +1059,30 @@
         "title": "Analista de Business Intelligence Sênior",
         "link": "https://carreiras.ifood.com.br/job/8094596002/",
         "location": "Osasco,São Paulo, Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-30",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Pleno",
+        "link": "https://carreiras.ifood.com.br/job/8036618002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-07-30",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Sênior (Projetos)",
+        "link": "https://carreiras.ifood.com.br/job/8086936002/",
+        "location": "Osasco,São Paulo, Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-07-30",
+        "date_saida": null
+    },
+    {
+        "title": "Product Manager IV - Produto Disrupt | Tech",
+        "link": "https://carreiras.ifood.com.br/job/8079353002/",
+        "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-07-30",
         "date_saida": null
