@@ -1099,9 +1099,9 @@
         "title": "Cientista de Dados (ML)",
         "link": "https://carreiras.ifood.com.br/job/8110895002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-08-07",
-        "date_saida": null
+        "date_saida": "2025-08-19"
     },
     {
         "title": "Group Product Manager - Chapter Lead",
@@ -1155,6 +1155,14 @@
         "title": "Gerente de Engenharia de Dados",
         "link": "https://carreiras.ifood.com.br/job/8053130002/",
         "location": "Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-08-19",
+        "date_saida": null
+    },
+    {
+        "title": "ANALISTA DE NEGÓCIOS JUNIOR - GROWTH FOOD DELIVERY",
+        "link": "https://carreiras.ifood.com.br/job/8080669002/",
+        "location": "Osasco,São Paulo, Brasil",
         "status": "ativa",
         "date_entrada": "2025-08-19",
         "date_saida": null
