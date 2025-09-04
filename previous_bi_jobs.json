@@ -1198,5 +1198,21 @@
         "status": "ativa",
         "date_entrada": "2025-09-01",
         "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Júnior - Mercado e Atacado",
+        "link": "https://carreiras.ifood.com.br/job/8141749002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-09-04",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de CRM Senior",
+        "link": "https://carreiras.ifood.com.br/job/8150217002/",
+        "location": "Híbrido",
+        "status": "ativa",
+        "date_entrada": "2025-09-04",
+        "date_saida": null
     }
 ]
