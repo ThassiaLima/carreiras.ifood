@@ -1059,9 +1059,9 @@
         "title": "Analista de Business Intelligence Sênior",
         "link": "https://carreiras.ifood.com.br/job/8094596002/",
         "location": "Osasco,São Paulo, Brasil",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-07-30",
-        "date_saida": null
+        "date_saida": "2025-09-13"
     },
     {
         "title": "Analista de Negócios Pleno",
@@ -1237,6 +1237,14 @@
         "location": "Brasil",
         "status": "ativa",
         "date_entrada": "2025-09-12",
+        "date_saida": null
+    },
+    {
+        "title": "Cientista de Dados Especialista",
+        "link": "https://carreiras.ifood.com.br/job/8142423002/",
+        "location": "Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-09-13",
         "date_saida": null
     }
 ]
