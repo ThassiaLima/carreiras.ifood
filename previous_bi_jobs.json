@@ -1227,9 +1227,9 @@
         "title": "Analista de Negócios Pleno - Performance e Operações",
         "link": "https://carreiras.ifood.com.br/job/8089270002/",
         "location": "Híbrido",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-09-08",
-        "date_saida": null
+        "date_saida": "2025-09-24"
     },
     {
         "title": "Senior Group Product Manager - ADS",
@@ -1306,6 +1306,22 @@
     {
         "title": "Analista de negócios Junior",
         "link": "https://carreiras.ifood.com.br/job/8082188002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-09-24",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Plenos",
+        "link": "https://carreiras.ifood.com.br/job/8141175002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-09-24",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Negócios Senior",
+        "link": "https://carreiras.ifood.com.br/job/8162013002/",
         "location": "Remoto",
         "status": "ativa",
         "date_entrada": "2025-09-24",
