@@ -1123,9 +1123,9 @@
         "title": "Analista de Negócios Pleno",
         "link": "https://carreiras.ifood.com.br/job/8079080002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-08-15",
-        "date_saida": null
+        "date_saida": "2025-09-27"
     },
     {
         "title": "Senior Group Product Manager - Plataforma",
@@ -1347,8 +1347,8 @@
         "title": "Data & AI Talent Hub 2025 – BRACIS & SBBD",
         "link": "https://carreiras.ifood.com.br/job/8185664002/",
         "location": "Brasil",
-        "status": "fechada",
+        "status": "ativa",
         "date_entrada": "2025-09-25",
-        "date_saida": "2025-09-26"
+        "date_saida": null
     }
 ]
