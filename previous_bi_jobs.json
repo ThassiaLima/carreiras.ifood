@@ -204,8 +204,8 @@
         "link": "https://carreiras.ifood.com.br/job/7999741002/",
         "location": "Osasco",
         "date_entrada": "2025-07-13",
-        "date_saida": "",
-        "status": "ativa"
+        "date_saida": "2025-10-06",
+        "status": "fechada"
     },
     {
         "title": "Engenheira de Dados Especialista (Afirmativa para mulheres)",
@@ -1331,9 +1331,9 @@
         "title": "Analista de Negócios Pleno - Logística",
         "link": "https://carreiras.ifood.com.br/job/8173068002/",
         "location": "Híbrido",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-09-25",
-        "date_saida": null
+        "date_saida": "2025-10-06"
     },
     {
         "title": "Analista de Negócios Sênior - Canais Entregadores",
@@ -1347,9 +1347,9 @@
         "title": "Data & AI Talent Hub 2025 – BRACIS & SBBD",
         "link": "https://carreiras.ifood.com.br/job/8185664002/",
         "location": "Brasil",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-09-25",
-        "date_saida": null
+        "date_saida": "2025-10-06"
     },
     {
         "title": "Analista de Negócios Pleno",
