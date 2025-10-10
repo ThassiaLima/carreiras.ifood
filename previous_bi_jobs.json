@@ -1379,9 +1379,9 @@
         "title": "Analista de Negócios Pleno - Operações Logística (Mercado e Atacado)",
         "link": "https://carreiras.ifood.com.br/job/8159642002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-10-03",
-        "date_saida": null
+        "date_saida": "2025-10-10"
     },
     {
         "title": "Engenheiro de Dados Especialista Sênior",
@@ -1421,6 +1421,22 @@
         "location": "Osasco,São Paulo, Brasil",
         "status": "ativa",
         "date_entrada": "2025-10-09",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de Dados Sênior",
+        "link": "https://carreiras.ifood.com.br/job/8164151002/",
+        "location": "Osasco,São Paulo, Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-10-10",
+        "date_saida": null
+    },
+    {
+        "title": "Software Engineering Manager (Vaga Afirmativa para Mulheres)",
+        "link": "https://carreiras.ifood.com.br/job/8013379002/",
+        "location": "Remoto",
+        "status": "ativa",
+        "date_entrada": "2025-10-10",
         "date_saida": null
     }
 ]
