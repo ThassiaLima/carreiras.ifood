@@ -1299,9 +1299,9 @@
         "title": "Analista de Negócios Junior",
         "link": "https://carreiras.ifood.com.br/job/8160347002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-09-24",
-        "date_saida": null
+        "date_saida": "2025-10-15"
     },
     {
         "title": "Analista de negócios Junior",
@@ -1453,6 +1453,14 @@
         "location": "Híbrido",
         "status": "ativa",
         "date_entrada": "2025-10-14",
+        "date_saida": null
+    },
+    {
+        "title": "Project Manager III- Gestão Estratégica Tech",
+        "link": "https://carreiras.ifood.com.br/job/8204669002/",
+        "location": "Osasco",
+        "status": "ativa",
+        "date_entrada": "2025-10-15",
         "date_saida": null
     }
 ]
