@@ -1411,9 +1411,9 @@
         "title": "Senior Technical Program Manager – Process Strategy",
         "link": "https://carreiras.ifood.com.br/job/8189484002/",
         "location": "Remoto",
-        "status": "ativa",
+        "status": "fechada",
         "date_entrada": "2025-10-08",
-        "date_saida": null
+        "date_saida": "2025-10-17"
     },
     {
         "title": "Analista de Business Intelligence Pleno",
@@ -1477,6 +1477,14 @@
         "location": "Osasco,São Paulo, Brasil",
         "status": "ativa",
         "date_entrada": "2025-10-16",
+        "date_saida": null
+    },
+    {
+        "title": "Analista de BI SR | CRM",
+        "link": "https://carreiras.ifood.com.br/job/8188159002/",
+        "location": "Osasco,São Paulo, Brasil",
+        "status": "ativa",
+        "date_entrada": "2025-10-17",
         "date_saida": null
     }
 ]
